@@ -27,7 +27,7 @@ const Footer = () => {
                     </div>
                     <div className='flex flex-col gap-4 items-center justify-center'>
                         <h1 className='font-lora text-4xl text-white'>Message</h1>
-                        <div className='h-80 w-[27rem] bg-zinc-300 rounded-md'>
+                        <div className='h-80 w-[27rem] md:w-[20rem] bg-zinc-300 rounded-md'>
                             <div className='grid grid-cols-2 flex-1 pt-9 px-4 gap-x-14 gap-y-7'>
                                 <input type="text" className='bg-black opacity-50 rounded-full py-1 pl-2' placeholder='Name:' />
                                 <input type="text" className='bg-black opacity-50 rounded-full py-1 pl-2' placeholder='Name:' />
@@ -35,7 +35,7 @@ const Footer = () => {
                                 <input type="text" className='bg-black opacity-50 rounded-full py-1 pl-2' placeholder='Name:' />
                             </div>
                             <div className='flex items-center justify-center pt-8'>
-                                <input className='h-24 w-[24rem] bg-black opacity-50 rounded-sm p-2' placeholder='Your Message...' />
+                                <input className='h-24 w-[27rem] md:w-[18rem] bg-black opacity-50 rounded-sm p-2' placeholder='Your Message...' />
                             </div>
                             <div className='flex flex-row-reverse pr-6 pt-3'>
                                 <Button variant={'send'}>
