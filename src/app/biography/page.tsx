@@ -2,12 +2,14 @@
 
 import MaxWidthWrapper from "@/components/MaxWidthWrapper"
 import SectionTitle from "@/components/SectionTitle"
+import EducationGrid from "@/components/EducationGrid"
+import InterestsCard from "@/components/InterestsCard"
 
 import Image from "next/image"
 import ImageBiography from '../../../public/ImageBiography.jpg'
-import Educationicon from '../../../public/Education.svg'
-import EducationGrid from "@/components/EducationGrid"
-import InterestsCard from "@/components/InterestsCard"
+import BlackSeparator from '../../../public/SeparatorVector.svg'
+import ProfesionCard from "@/components/ProfesionCard"
+
 
 export default function Biography() {
     return (
@@ -52,11 +54,41 @@ export default function Biography() {
                     </div>
                 </MaxWidthWrapper>
             </section>
-            <section className="h-[240rem] lg:h-[80rem] bg-blackbg bg-cover bg-center bg-neutral-600">
+            <section className="h-[134rem] md:h-[90rem] lg:h-[63rem] bg-blackbg bg-cover bg-no-repeat bg-center bg-neutral-600">
                 <MaxWidthWrapper>
-                    <SectionTitle TextColor="white" VectorColor="White" title="Interests" />
-                    <div className="mt-20 flex flex-col lg:flex-row items-center">
-                        <div className="flex flex-col lg:grid grid-cols-2 items-center gap-20">
+                    <SectionTitle TextColor="white" VectorColor="White" title="Profesion" />
+                    <div className="flex flex-col lg:flex-row lg:justify-between items-center gap-10 mt-10">
+                        <h1 className="text-white text-2xl max-w-md">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque suscipit sequi,
+                            sint assumenda explicabo laborum architecto voluptates.
+                            Tempore libero placeat illum quas, natus facere repellendus vero voluptatem voluptas,
+                            possimus eum! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit ex beatae nulla minima,
+                            omnis vitae eius, qui voluptatibus optio odio unde? Atque velit consequatur esse iure nesciunt dolorum deserunt dolores.
+                        </h1>
+                        <div className="flex flex-col sm:grid grid-cols-2 items-center gap-10">
+                            <ProfesionCard />
+                            <ProfesionCard />
+                            <ProfesionCard />
+                            <ProfesionCard />
+                            <ProfesionCard />
+                            <ProfesionCard />
+                        </div>
+                    </div>
+                </MaxWidthWrapper>
+            </section>
+            <section className="h-[215rem] md:h-[120rem] lg:h-[70rem] bg-whitebg bg-cover bg-center">
+                <MaxWidthWrapper>
+                    <SectionTitle TextColor="black" VectorColor="Black" title="Interests" />
+                    <div className="mt-20 flex flex-col md:grid grid-cols-2 items-center gap-24">
+                        <div className="flex flex-col lg:grid grid-cols-2 items-center gap-14">
+                            <InterestsCard />
+                            <InterestsCard />
+                            <InterestsCard />
+                            <InterestsCard />
+                            <InterestsCard />
+                            <InterestsCard />
+                        </div>
+                        <div className="flex flex-col lg:grid grid-cols-2 items-center gap-14">
                             <InterestsCard />
                             <InterestsCard />
                             <InterestsCard />
