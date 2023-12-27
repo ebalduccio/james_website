@@ -15,7 +15,7 @@ export default function Biography() {
             <section className="h-[25rem] bg-whitebg bg-cover bg-no-repeat bg-center">
                 <MaxWidthWrapper>
                     <div className=" py-32 mx-auto flex items-center justify-center">
-                        <h1 className="text-5xl font-lora text-center">Biography</h1>
+                        <h1 className="text-8xl font-lora text-center">Biography</h1>
                     </div>
                 </MaxWidthWrapper>
             </section>
@@ -52,19 +52,11 @@ export default function Biography() {
                     </div>
                 </MaxWidthWrapper>
             </section>
-            <section className="h-[240rem] lg:h-[60rem] bg-blackbg bg-cover bg-center bg-neutral-600">
+            <section className="h-[240rem] lg:h-[80rem] bg-blackbg bg-cover bg-center bg-neutral-600">
                 <MaxWidthWrapper>
                     <SectionTitle TextColor="white" VectorColor="White" title="Interests" />
-                    <div className="flex flex-col lg:flex-row items-center gap-32">
+                    <div className="mt-20 flex flex-col lg:flex-row items-center">
                         <div className="flex flex-col lg:grid grid-cols-2 items-center gap-20">
-                            <InterestsCard />
-                            <InterestsCard />
-                            <InterestsCard />
-                            <InterestsCard />
-                            <InterestsCard />
-                            <InterestsCard />
-                        </div>
-                        <div className="flex flex-col lg:grid grid-cols-2 items-center gap-10">
                             <InterestsCard />
                             <InterestsCard />
                             <InterestsCard />
