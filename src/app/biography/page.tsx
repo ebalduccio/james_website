@@ -7,7 +7,6 @@ import InterestsCard from "@/components/InterestsCard"
 
 import Image from "next/image"
 import ImageBiography from '../../../public/ImageBiography.jpg'
-import BlackSeparator from '../../../public/SeparatorVector.svg'
 import ProfesionCard from "@/components/ProfesionCard"
 import PublicationBiography from "@/components/PublicationBiography"
 
@@ -100,7 +99,7 @@ export default function Biography() {
                     </div>
                 </MaxWidthWrapper>
             </section>
-            <section className="h-[100rem] sm:h-[80rem] bg-blackbg bg-center bg-cover bg-no-repeat bg-neutral-600">
+            <section className="h-[85rem] sm:h-[80rem] bg-blackbg bg-center bg-cover bg-no-repeat bg-neutral-600">
                 <MaxWidthWrapper>
                     <SectionTitle TextColor="white" VectorColor="White" title="Personal Blog" />
                     <div className="flex flex-col gap-20 lg:flex-row lg:justify-between items-center">
