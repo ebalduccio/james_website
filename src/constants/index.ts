@@ -43,6 +43,10 @@ export const FooterQuickLinks = [
         href: '/biography'
     },
     {
+        label: 'Investor Acumen',
+        href: '/investoracumen'
+    },
+    {
         label: 'Publications',
         href: '/publications'
     },
