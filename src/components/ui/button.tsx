@@ -11,6 +11,7 @@ const buttonVariants = cva(
       variant: {
         default: "bg-primary text-primary-foreground hover:bg-primary/90",
         grayhome: "bg-gray-400 text-white hover:bg-neutral-900 font-roboto",
+        investoracumen: "bg-sky-500 text-white hover:bg-sky-900 font-roboto",
         send: 'bg-sky-600 text-white hover:bg-sky-900 font-roboto',
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
