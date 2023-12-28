@@ -9,6 +9,7 @@ import Image from "next/image"
 import ImageBiography from '../../../public/ImageBiography.jpg'
 import BlackSeparator from '../../../public/SeparatorVector.svg'
 import ProfesionCard from "@/components/ProfesionCard"
+import PublicationBiography from "@/components/PublicationBiography"
 
 
 export default function Biography() {
@@ -57,7 +58,7 @@ export default function Biography() {
             <section className="h-[134rem] md:h-[90rem] lg:h-[63rem] bg-blackbg bg-cover bg-no-repeat bg-center bg-neutral-600">
                 <MaxWidthWrapper>
                     <SectionTitle TextColor="white" VectorColor="White" title="Profesion" />
-                    <div className="flex flex-col lg:flex-row lg:justify-between items-center gap-10 mt-10">
+                    <div className="flex flex-col lg:flex-row lg:justify-between items-center gap-8 mt-10">
                         <h1 className="text-white text-2xl max-w-md">
                             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque suscipit sequi,
                             sint assumenda explicabo laborum architecto voluptates.
@@ -95,6 +96,30 @@ export default function Biography() {
                             <InterestsCard />
                             <InterestsCard />
                             <InterestsCard />
+                        </div>
+                    </div>
+                </MaxWidthWrapper>
+            </section>
+            <section className="h-[100rem] sm:h-[80rem] bg-blackbg bg-center bg-cover bg-no-repeat bg-neutral-600">
+                <MaxWidthWrapper>
+                    <SectionTitle TextColor="white" VectorColor="White" title="Personal Blog" />
+                    <div className="flex flex-col gap-20 lg:flex-row lg:justify-between items-center">
+                        <div className="h-[40rem] w-[40rem] lg:w-[42rem] rounded-lg bg-neutral-400">
+                            <div className="pt-px ml-2">
+                                <div className="my-5 mx-5 bg-white rounded-full h-6 flex items-center justify-center w-36">
+                                    <h2 className="text-center font-roboto text-sm max-w-md">Recent Publications:</h2>
+                                </div>
+                            </div>
+                            <div className="flex flex-col items-center gap-4">
+                                <PublicationBiography />
+                                <PublicationBiography />
+                                <PublicationBiography />
+                            </div>
+                        </div>
+                        <div className="text-white text-3xl max-w-lg">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                            Laudantium aliquam itaque ipsam ad earum laborum obcaecati sed quis placeat,
+                            ut incidunt quibusdam iusto alias maiores molestias quia esse asperiores! Cupiditate?
                         </div>
                     </div>
                 </MaxWidthWrapper>
