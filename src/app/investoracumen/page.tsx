@@ -19,14 +19,14 @@ export default function InvestorAcumenPage() {
                     </div>
                 </MaxWidthWrapper>
             </section>
-            <section className="h-[104rem] lg:h-[80rem] bg-blackbg bg-cover bg-center bg-no-repeat bg-neutral-600">
+            <section className="h-[104rem] lg:h-[78rem] bg-blackbg bg-cover bg-center bg-no-repeat bg-neutral-600">
                 <MaxWidthWrapper>
                     <SectionTitle TextColor="white" VectorColor="White" title="My Company" />
                     <div className="flex flex-col gap-20 mt-20 items-center">
                         <InvestorAcumenCard />
                         <InvestorAcumenCard />
                     </div>
-                    <div className="flex items-center justify-end pr-20 pt-2">
+                    <div className="flex items-center justify-center lg:justify-end lg:pr-20 pt-2 lg:pt-10">
                         <Button variant={'investoracumen'}>
                             Investor Acumen
                             &rarr;
