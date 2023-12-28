@@ -7,7 +7,7 @@ const PublicationBiography = () => {
         <div>
             <div className="w-[32rem] h-40 bg-white rounded-sm">
                 <div className="mx-2 flex items-center gap-4">
-                    <div className="flex flex-col gap-4 mt-2 text-left">
+                    <div className="flex flex-col gap-4 mt-4 ml-4 text-left">
                         <h1 className="text-2xl">Title</h1>
                         <div className='flex flex-col gap-2'>
                             <p className="text-sm text-left max-w-md">
