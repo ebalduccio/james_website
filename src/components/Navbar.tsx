@@ -12,7 +12,7 @@ import NavLinks from './NavLinks'
 import NavLinksMobile from './NavLinksMobile'
 
 const Navbar = () => {
-    const [open, setOpen] = useState(false)
+    const [open, setOpen] = useState<boolean>(false)
 
     return (
         <>
@@ -25,7 +25,7 @@ const Navbar = () => {
                                     <h1 className='text-4xl font-lora'>JK</h1>
                                 </Link>
                             </div>
-                            <div className='lg:hidden cursor-pointer' onClick={() => setOpen(!open)}>
+                            <div className='lg:hidden duration-200' onClick={() => setOpen(!open)}>
                                 <Image
                                     src={open ? Close : Burguer}
                                     alt='burguer icon'
