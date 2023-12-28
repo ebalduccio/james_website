@@ -7,7 +7,7 @@ import { Button } from './ui/button'
 
 const Footer = () => {
     return (
-        <footer className='h-[65rem] lg:h-[35rem] w-full bg-zinc-800'>
+        <footer className='h-[69rem] sm:h-[62rem] lg:h-[35rem] w-full bg-zinc-800'>
             <MaxWidthWrapper>
                 <div className='flex flex-col lg:flex-row gap-16 lg:justify-between'>
                     <div className='flex flex-col'>
@@ -35,7 +35,7 @@ const Footer = () => {
                                 <input type="text" className='bg-black opacity-50 rounded-full py-1 pl-2' placeholder='Name:' />
                             </div>
                             <div className='flex items-center justify-center pt-8'>
-                                <input className='h-24 w-[27rem] md:w-[18rem] bg-black opacity-50 rounded-sm p-2' placeholder='Your Message...' />
+                                <input className='h-24 w-[23rem] md:w-[18rem] bg-black opacity-50 rounded-sm p-2' placeholder='Your Message...' />
                             </div>
                             <div className='flex flex-row-reverse pr-6 pt-3'>
                                 <Button variant={'send'}>
