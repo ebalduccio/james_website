@@ -83,6 +83,7 @@ export default function Home() {
             <div className="flex flex-col gap-12 lg:gap-32">
               <h2 className="font-roboto text-xl max-w-md">
                 James A. Kostohryz has more than twenty years of experience investing and trading virtually every asset class across the globe.
+                {/* eslint-disable-next-line react/no-unescaped-entities*/}
                 Kostohryz started his investment career as an analyst at one of the world's
                 largest asset management firms covering sectors as diverse as emerging markets,
                 banking, energy, construction, real estate, metals and mining. Later,
