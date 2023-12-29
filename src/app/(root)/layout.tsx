@@ -19,13 +19,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className='h-full '>
-      <body className={cn('relative h-full font-sans antialiased', roboto.className)}>
+      <body className={cn('relative h-full antialiased font-roboto')}>
         <main className='absolute sm:relative flex flex-col min-h-screen'>
           <Navbar />
           <div className='flex-grow flex-1'>
             {children}
-            <Footer />
           </div>
+          <Footer />
         </main>
       </body>
     </html>

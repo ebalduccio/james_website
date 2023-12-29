@@ -7,7 +7,7 @@ import { Button } from './ui/button'
 
 const Footer = () => {
     return (
-        <footer className='h-[69rem] sm:h-[62rem] lg:h-[35rem] bg-zinc-800'>
+        <footer className='h-[64rem] sm:h-[62rem] lg:h-[35rem] bg-zinc-800'>
             <MaxWidthWrapper>
                 <div className='flex flex-col lg:flex-row gap-16 lg:justify-between'>
                     <div className='flex flex-col'>
