@@ -54,10 +54,10 @@ export default function Biography() {
                     </div>
                 </MaxWidthWrapper>
             </section>
-            <section className="h-[134rem] md:h-[90rem] lg:h-[63rem] bg-blackbg bg-cover bg-no-repeat bg-center bg-neutral-600">
+            <section className="h-[90rem] md:h-[90rem] lg:h-[63rem] bg-blackbg bg-cover bg-no-repeat bg-center bg-neutral-600">
                 <MaxWidthWrapper>
                     <SectionTitle TextColor="white" VectorColor="White" title="Profesion" />
-                    <div className="flex flex-col lg:flex-row lg:justify-between items-center gap-8 mt-10">
+                    <div className="flex flex-col lg:flex-row lg:justify-between items-center gap-14 mt-10">
                         <h1 className="text-white text-2xl max-w-md">
                             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque suscipit sequi,
                             sint assumenda explicabo laborum architecto voluptates.
@@ -65,7 +65,7 @@ export default function Biography() {
                             possimus eum! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit ex beatae nulla minima,
                             omnis vitae eius, qui voluptatibus optio odio unde? Atque velit consequatur esse iure nesciunt dolorum deserunt dolores.
                         </h1>
-                        <div className="flex flex-col sm:grid grid-cols-2 items-center gap-10">
+                        <div className="grid grid-cols-2 items-center gap-10">
                             <ProfesionCard />
                             <ProfesionCard />
                             <ProfesionCard />
@@ -76,11 +76,11 @@ export default function Biography() {
                     </div>
                 </MaxWidthWrapper>
             </section>
-            <section className="h-[215rem] md:h-[120rem] lg:h-[70rem] bg-whitebg bg-cover bg-center">
+            <section className="h-[120rem] md:h-[120rem] lg:h-[70rem] bg-whitebg bg-cover bg-center">
                 <MaxWidthWrapper>
                     <SectionTitle TextColor="black" VectorColor="Black" title="Interests" />
                     <div className="mt-20 flex flex-col md:grid grid-cols-2 items-center gap-24">
-                        <div className="flex flex-col lg:grid grid-cols-2 items-center gap-14">
+                        <div className="grid grid-cols-2 items-center gap-14">
                             <InterestsCard />
                             <InterestsCard />
                             <InterestsCard />
@@ -88,7 +88,7 @@ export default function Biography() {
                             <InterestsCard />
                             <InterestsCard />
                         </div>
-                        <div className="flex flex-col lg:grid grid-cols-2 items-center gap-14">
+                        <div className="grid grid-cols-2 items-center gap-14">
                             <InterestsCard />
                             <InterestsCard />
                             <InterestsCard />
