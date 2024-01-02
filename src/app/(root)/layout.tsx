@@ -1,11 +1,8 @@
 import type { Metadata } from 'next'
-import { Roboto } from 'next/font/google'
 import '../globals.css'
 import { cn } from '@/lib/utils'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
-
-const roboto = Roboto({ subsets: ['latin'], weight: '300' })
 
 export const metadata: Metadata = {
   title: 'James Kostohryz',
