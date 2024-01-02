@@ -18,7 +18,7 @@ export default function PublicationsPage() {
                     </div>
                 </MaxWidthWrapper>
             </section>
-            <section className="h-[70rem] bg-blackbg bg-cover bg-center bg-no-repeat bg-neutral-600">
+            <section className="h-[67rem] bg-blackbg bg-cover bg-center bg-no-repeat bg-neutral-600">
                 <MaxWidthWrapper>
                     <div className="flex flex-col items-center gap-4">
                         <div className='flex items-center justify-center pt-14'>
@@ -60,7 +60,7 @@ export default function PublicationsPage() {
                     </div>
                 </MaxWidthWrapper>
             </section>
-            <section className="h-[70rem] bg-whitebg bg-cover bg-center bg-no-repeat">
+            <section className="h-[67rem] bg-whitebg bg-cover bg-center bg-no-repeat">
                 <MaxWidthWrapper>
                     <div className="flex flex-col items-center gap-4">
                         <div className='flex items-center justify-center pt-14'>
@@ -102,7 +102,7 @@ export default function PublicationsPage() {
                     </div>
                 </MaxWidthWrapper>
             </section>
-            <section className="h-[70rem] bg-blackbg bg-cover bg-center bg-no-repeat bg-neutral-600">
+            <section className="h-[67rem] bg-blackbg bg-cover bg-center bg-no-repeat bg-neutral-600">
                 <MaxWidthWrapper>
                     <div className="flex flex-col items-center gap-4">
                         <div className='flex items-center justify-center pt-14'>
