@@ -16,7 +16,7 @@ function SectionTitle({ title, subtitle, VectorColor, TextColor }: TitleProps) {
                 <h1 className={`text-${TextColor} text-6xl font-normal font-lora`}>{title}</h1>
             </div>
             <div className='flex items-center justify-center pt-7'>
-                <div className="text-black text-[30.91px] font-normal font-lora">{subtitle}</div>
+                <div className={`text-${TextColor} text-[30.91px] font-normal font-lora`}>{subtitle}</div>
             </div>
         </>
     )
