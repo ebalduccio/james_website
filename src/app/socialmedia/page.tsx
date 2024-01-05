@@ -1,7 +1,10 @@
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
-import PublicationInvestorAcumen from "@/components/PublicationInvestorAcumen";
 import PublicationSocialMedia from "@/components/PublicationSocialMedia";
 import SectionTitle from "@/components/SectionTitle";
+
+import Image from "next/image";
+import fbicon from '../../../public/FacebookMD.svg'
+import tticon from '../../../public/TwitterMD.svg'
 
 export default function SocialMediaPage() {
     return (
@@ -13,7 +16,7 @@ export default function SocialMediaPage() {
                     </div>
                 </MaxWidthWrapper>
             </section>
-            <section className="h-[68rem] bg-blackbg bg-cover bg-center bg-no-repeat bg-neutral-600">
+            <section className="h-[90rem] bg-blackbg bg-cover bg-center bg-no-repeat bg-neutral-600">
                 <MaxWidthWrapper>
                     <SectionTitle TextColor="white" VectorColor="White" title="Social Media" subtitle="Recents Publications" />
                     <div className="flex flex-col items-center pt-10">
@@ -27,6 +30,32 @@ export default function SocialMediaPage() {
                                 <PublicationSocialMedia />
                                 <PublicationSocialMedia />
                                 <PublicationSocialMedia />
+                                <div className="grid grid-cols-2 items-center gap-20 pt-10">
+                                    <div>
+                                        <Image
+                                            src={fbicon}
+                                            alt="fb icon"
+                                        />
+                                    </div>
+                                    <div>
+                                        <Image
+                                            src={tticon}
+                                            alt="fb icon"
+                                        />
+                                    </div>
+                                    <div>
+                                        <Image
+                                            src={fbicon}
+                                            alt="fb icon"
+                                        />
+                                    </div>
+                                    <div>
+                                        <Image
+                                            src={fbicon}
+                                            alt="fb icon"
+                                        />
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
