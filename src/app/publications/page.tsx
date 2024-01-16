@@ -10,7 +10,6 @@ import InvestingLogo from '../../../public/InvestingMD.svg'
 import TheStreetLogo from '../../../public/TheStreetMd.svg'
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { cn } from "@/lib/utils";
 import Publication from "@/components/Publication";
 
 type DataProps = {
@@ -64,6 +63,12 @@ export default function PublicationsPage() {
     if (!tsPosts || !iaPosts || !saPosts || !inPosts) {
         return <div>Loading...</div>;
     }
+
+    useEffect(() => {
+        if (tsPosts.length > 0) {
+            console.log(tsPosts[0].link); // Acessa o link do primeiro post
+        }
+    }, [tsPosts]);
 
     return (
         <>
@@ -148,9 +153,9 @@ export default function PublicationsPage() {
                             </div>
                         </div>
                         <div>
-                            <Button variant={'investoracumen'}>
-                                <a href="https://www.investoracumen.com/" target="_blank">
-                                    Investor Acumen
+                            <Button variant={'seekingalpha'}>
+                                <a href="https://seekingalpha.com/author/james-a-kostohryz" target="_blank">
+                                    Seeking Alpha
                                 </a>
                                 &rarr;
                             </Button>
@@ -190,9 +195,9 @@ export default function PublicationsPage() {
                             </div>
                         </div>
                         <div>
-                            <Button variant={'investoracumen'}>
+                            <Button variant={'investing'}>
                                 <a href="https://www.investoracumen.com/" target="_blank">
-                                    Investor Acumen
+                                    Investing
                                 </a>
                                 &rarr;
                             </Button>
@@ -200,7 +205,7 @@ export default function PublicationsPage() {
                     </div>
                 </MaxWidthWrapper>
             </section>
-            <section className="h-[70rem] bg-whitebg bg-cover bg-center bg-no-repeat">
+            <section className="h-[66rem] bg-whitebg bg-cover bg-center bg-no-repeat">
                 <MaxWidthWrapper>
                     <div className="flex flex-col items-center gap-4">
                         <div className='flex items-center justify-center pt-14'>
@@ -225,16 +230,16 @@ export default function PublicationsPage() {
                                     <h2 className="text-center font-roboto text-xs max-w-md">Recent Publications:</h2>
                                 </div>
                             </div>
-                            <div className="flex flex-col gap-10 items-center">
+                            <div className="flex flex-col gap-8 items-center">
                                 {tsPosts.map((post) => (
                                     <Publication date={post.date_pub} link={post.link} title={post.title} Darkmode={false} />
                                 ))}
                             </div>
                         </div>
                         <div>
-                            <Button variant={'investoracumen'}>
+                            <Button variant={'thestreet'}>
                                 <a href="https://www.investoracumen.com/" target="_blank">
-                                    Investor Acumen
+                                    TheStreet
                                 </a>
                                 &rarr;
                             </Button>
