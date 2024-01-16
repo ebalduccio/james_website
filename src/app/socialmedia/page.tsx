@@ -26,7 +26,7 @@ export default function SocialMediaPage() {
                                     <h2 className="text-center text-white font-roboto text-xs max-w-md">Recent Publications:</h2>
                                 </div>
                             </div>
-                            <div className="flex flex-col gap-10 items-center">
+                            <div className="flex flex-col sm: gap-10 items-center">
                                 <PublicationSocialMedia />
                                 <PublicationSocialMedia />
                                 <PublicationSocialMedia />
