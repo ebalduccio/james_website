@@ -1,5 +1,6 @@
+'use client'
+
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
-import PublicationInvestorAcumen from "@/components/PublicationInvestorAcumen";
 import { Button } from "@/components/ui/button";
 
 import Image from "next/image";
@@ -7,8 +8,63 @@ import InvestorAcumenLogo from '../../../public/InvestorAcumenMd.svg'
 import SeekingAlphaLogo from '../../../public/SeekingAlphaMd.svg'
 import InvestingLogo from '../../../public/InvestingMD.svg'
 import TheStreetLogo from '../../../public/TheStreetMd.svg'
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { cn } from "@/lib/utils";
+import Publication from "@/components/Publication";
+
+type DataProps = {
+    title: string,
+    link: string,
+    date_pub: string
+};
 
 export default function PublicationsPage() {
+    const [tsPosts, setTsPosts] = useState<DataProps[]>([]);
+    const [iaPosts, setIaPosts] = useState<DataProps[]>([]);
+    const [saPosts, setSaPosts] = useState<DataProps[]>([]);
+    const [inPosts, setInPosts] = useState<DataProps[]>([]);
+
+    useEffect(() => {
+        const fetchTsPosts = async () => {
+            const response = await axios.get<DataProps[]>('https://appdata.investoracumen.com/james/ts');
+            setTsPosts(response.data);
+        };
+
+        fetchTsPosts();
+    }, []);
+
+    useEffect(() => {
+        const fetchIaPosts = async () => {
+            const response = await axios.get<DataProps[]>('https://appdata.investoracumen.com/james/ia');
+            setIaPosts(response.data);
+        };
+
+        fetchIaPosts();
+    }, []);
+
+    useEffect(() => {
+        const fetchSaPosts = async () => {
+            const response = await axios.get<DataProps[]>('https://appdata.investoracumen.com/james/sa');
+            setSaPosts(response.data);
+        };
+
+        fetchSaPosts();
+    }, []);
+
+    useEffect(() => {
+        const fetchInPosts = async () => {
+            const response = await axios.get<DataProps[]>('https://appdata.investoracumen.com/james/in');
+            setInPosts(response.data);
+        };
+
+        fetchInPosts();
+    }, []);
+
+    if (!tsPosts || !iaPosts || !saPosts || !inPosts) {
+        return <div>Loading...</div>;
+    }
+
     return (
         <>
             <section className="h-[25rem] bg-whitebg bg-cover bg-no-repeat bg-center">
@@ -44,9 +100,9 @@ export default function PublicationsPage() {
                                 </div>
                             </div>
                             <div className="flex flex-col gap-10 items-center">
-                                <PublicationInvestorAcumen />
-                                <PublicationInvestorAcumen />
-                                <PublicationInvestorAcumen />
+                                {iaPosts.map((post) => (
+                                    <Publication date={post.date_pub} link={post.link} title={post.title} />
+                                ))}
                             </div>
                         </div>
                         <div>
@@ -86,9 +142,9 @@ export default function PublicationsPage() {
                                 </div>
                             </div>
                             <div className="flex flex-col gap-10 items-center">
-                                <PublicationInvestorAcumen Darkmode={true} />
-                                <PublicationInvestorAcumen Darkmode={true} />
-                                <PublicationInvestorAcumen Darkmode={true} />
+                                {saPosts.map((post) => (
+                                    <Publication date={post.date_pub} link={post.link} title={post.title} />
+                                ))}
                             </div>
                         </div>
                         <div>
@@ -128,9 +184,9 @@ export default function PublicationsPage() {
                                 </div>
                             </div>
                             <div className="flex flex-col gap-10 items-center">
-                                <PublicationInvestorAcumen />
-                                <PublicationInvestorAcumen />
-                                <PublicationInvestorAcumen />
+                                {iaPosts.map((post) => (
+                                    <Publication date={post.date_pub} link={post.link} title={post.title} />
+                                ))}
                             </div>
                         </div>
                         <div>
@@ -170,9 +226,9 @@ export default function PublicationsPage() {
                                 </div>
                             </div>
                             <div className="flex flex-col gap-10 items-center">
-                                <PublicationInvestorAcumen Darkmode={true} />
-                                <PublicationInvestorAcumen Darkmode={true} />
-                                <PublicationInvestorAcumen Darkmode={true} />
+                                {tsPosts.map((post) => (
+                                    <Publication date={post.date_pub} link={post.link} title={post.title} Darkmode={false} />
+                                ))}
                             </div>
                         </div>
                         <div>
