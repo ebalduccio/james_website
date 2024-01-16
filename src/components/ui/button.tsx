@@ -11,7 +11,10 @@ const buttonVariants = cva(
       variant: {
         default: "bg-primary text-primary-foreground hover:bg-primary/90",
         grayhome: "bg-gray-400 text-white hover:bg-neutral-900 font-roboto",
-        investoracumen: "bg-sky-500 text-white hover:bg-sky-900 font-roboto",
+        investoracumen: "bg-sky-500 text-white hover:bg-sky-600 font-roboto",
+        thestreet: "bg-black text-white hover:bg-gray-700 font-roboto",
+        seekingalpha: "bg-orange-500 text-white hover:bg-orange-600 font-roboto",
+        investing: "bg-black text-white hover:bg-gray-700 font-roboto",
         send: 'bg-sky-600 text-white hover:bg-sky-900 font-roboto',
         sucess: 'bg-lime-500 text-white hover:bg-lime-900 font-roboto',
         destructive:
