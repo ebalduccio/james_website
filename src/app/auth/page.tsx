@@ -11,7 +11,7 @@ export default function AuthPage() {
         <>
             <section className="h-[60rem] bg-whitebg bg-cover bg-center bg-no-repeat">
                 <MaxWidthWrapper>
-                    <SectionTitle TextColor="black" VectorColor="Black" title="James Kostohryz" subtitle="Authentication" />
+                    <SectionTitle TextColor="black" VectorColor="Black" title="James A. Kostohryz" subtitle="Authentication" />
                     <div className="flex flex-col items-center mt-20">
                         <div className="w-[30rem] sm:w-[40rem] h-[26rem] relative bg-stone-500 rounded-3xl">
                             <div className="absolute right-24 bottom-[21.6rem]">
