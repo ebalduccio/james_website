@@ -66,9 +66,19 @@ export default function PublicationsPage() {
 
     useEffect(() => {
         if (tsPosts.length > 0) {
-            console.log(tsPosts[0].link); // Acessa o link do primeiro post
+            console.log(tsPosts[0].link);
         }
     }, [tsPosts]);
+    useEffect(() => {
+        if (iaPosts.length > 0) {
+            console.log(iaPosts[0].link);
+        }
+    }, [iaPosts]);
+    useEffect(() => {
+        if (saPosts.length > 0) {
+            console.log(saPosts[0].link);
+        }
+    }, [saPosts]);
 
     return (
         <>
@@ -189,7 +199,7 @@ export default function PublicationsPage() {
                                 </div>
                             </div>
                             <div className="flex flex-col gap-10 items-center">
-                                {iaPosts.map((post) => (
+                                {inPosts.map((post) => (
                                     <Publication date={post.date_pub} link={post.link} title={post.title} />
                                 ))}
                             </div>
