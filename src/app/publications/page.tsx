@@ -116,7 +116,7 @@ export default function PublicationsPage() {
                             </div>
                             <div className="flex flex-col gap-10 items-center">
                                 {iaPosts.map((post) => (
-                                    <Publication date={post.date_pub} link={post.link} title={post.title} />
+                                    <Publication key={post.link} date={post.date_pub} link={post.link} title={post.title} />
                                 ))}
                             </div>
                         </div>
@@ -158,7 +158,7 @@ export default function PublicationsPage() {
                             </div>
                             <div className="flex flex-col gap-10 items-center">
                                 {saPosts.map((post) => (
-                                    <Publication date={post.date_pub} link={post.link} title={post.title} />
+                                    <Publication key={post.link} date={post.date_pub} link={post.link} title={post.title} />
                                 ))}
                             </div>
                         </div>
@@ -200,7 +200,7 @@ export default function PublicationsPage() {
                             </div>
                             <div className="flex flex-col gap-10 items-center">
                                 {inPosts.map((post) => (
-                                    <Publication date={post.date_pub} link={post.link} title={post.title} />
+                                    <Publication key={post.link} date={post.date_pub} link={post.link} title={post.title} />
                                 ))}
                             </div>
                         </div>
@@ -242,7 +242,7 @@ export default function PublicationsPage() {
                             </div>
                             <div className="flex flex-col gap-8 items-center">
                                 {tsPosts.map((post) => (
-                                    <Publication date={post.date_pub} link={post.link} title={post.title} Darkmode={false} />
+                                    <Publication key={post.link} date={post.date_pub} link={post.link} title={post.title} Darkmode={false} />
                                 ))}
                             </div>
                         </div>
