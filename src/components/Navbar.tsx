@@ -52,10 +52,12 @@ const Navbar = () => {
                             <NavLinksMobile />
                         </div>
                         <div className='ml-4'>
-                            <Button variant={'grayhome'}>
-                                Authorization
-                                &rarr;
-                            </Button>
+                            <Link href={'/auth'}>
+                                <Button variant={'grayhome'}>
+                                    Authorization
+                                    &rarr;
+                                </Button>
+                            </Link>
                         </div>
                     </div>
                 </div>

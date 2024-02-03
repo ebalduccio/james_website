@@ -45,7 +45,7 @@ export default function AuthPage() {
                                 </div>
                                 <div className="pt-10">
                                     <Button variant={"sucess"}>
-                                        Authenticate
+                                        Login
                                     </Button>
                                 </div>
                             </div>

@@ -1,5 +1,5 @@
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
-import PublicationInvestorAcumen from "@/components/PublicationInvestorAcumen";
+import Publication from "@/components/Publication";
 import SectionTitle from "@/components/SectionTitle";
 
 export default function PersonalBlogPage() {
@@ -23,11 +23,11 @@ export default function PersonalBlogPage() {
                                 </div>
                             </div>
                             <div className="flex flex-col gap-10 items-center">
-                                <PublicationInvestorAcumen />
-                                <PublicationInvestorAcumen />
-                                <PublicationInvestorAcumen />
-                                <PublicationInvestorAcumen />
-                                <PublicationInvestorAcumen />
+                                <Publication />
+                                <Publication />
+                                <Publication />
+                                <Publication />
+                                <Publication />
                             </div>
                         </div>
                     </div>
