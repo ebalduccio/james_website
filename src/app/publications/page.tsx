@@ -66,17 +66,14 @@ export default function PublicationsPage() {
 
     useEffect(() => {
         if (tsPosts.length > 0) {
-            console.log(tsPosts[0].link);
         }
     }, [tsPosts]);
     useEffect(() => {
         if (iaPosts.length > 0) {
-            console.log(iaPosts[0].link);
         }
     }, [iaPosts]);
     useEffect(() => {
         if (saPosts.length > 0) {
-            console.log(saPosts[0].link);
         }
     }, [saPosts]);
 
