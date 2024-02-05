@@ -42,23 +42,23 @@ export default function PublicationsPage() {
         fetchIaPosts();
     }, []);
 
-    // useEffect(() => {
-    //     const fetchSaPosts = async () => {
-    //         const response = await axios.get<DataProps[]>('https://appdata.investoracumen.com/james/sa');
-    //         setSaPosts(response.data);
-    //     };
+    useEffect(() => {
+        const fetchSaPosts = async () => {
+            const response = await axios.get<DataProps[]>('https://appdata.investoracumen.com/james/sa');
+            setSaPosts(response.data);
+        };
 
-    //     fetchSaPosts();
-    // }, []);
+        fetchSaPosts();
+    }, []);
 
-    // useEffect(() => {
-    //     const fetchInPosts = async () => {
-    //         const response = await axios.get<DataProps[]>('https://appdata.investoracumen.com/james/in');
-    //         setInPosts(response.data);
-    //     };
+    useEffect(() => {
+        const fetchInPosts = async () => {
+            const response = await axios.get<DataProps[]>('https://appdata.investoracumen.com/james/in');
+            setInPosts(response.data);
+        };
 
-    //     fetchInPosts();
-    // }, []);
+        fetchInPosts();
+    }, []);
 
     if (!tsPosts || !iaPosts || !saPosts || !inPosts) {
         return <div>Loading...</div>;
