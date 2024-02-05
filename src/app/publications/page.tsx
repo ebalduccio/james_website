@@ -64,19 +64,6 @@ export default function PublicationsPage() {
         return <div>Loading...</div>;
     }
 
-    useEffect(() => {
-        if (tsPosts.length > 0) {
-        }
-    }, [tsPosts]);
-    useEffect(() => {
-        if (iaPosts.length > 0) {
-        }
-    }, [iaPosts]);
-    useEffect(() => {
-        if (saPosts.length > 0) {
-        }
-    }, [saPosts]);
-
     return (
         <>
             <section className="h-[25rem] bg-whitebg bg-cover bg-no-repeat bg-center">
