@@ -1,7 +1,6 @@
 import '../globals.css'
-import { cn } from '@/lib/utils'
-import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
+import DashboardNavbar from '@/components/DashboardNavbar'
+import DashboardSideBar from '@/components/DashboardSideBar'
 
 export const metadata = {
   title: 'Dashboard',
@@ -14,11 +13,14 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className='h-full '>
-      <body className={cn('relative h-full antialiased font-roboto')}>
-        <main className='absolute sm:relative flex flex-col min-h-screen'>
-          <div className='flex-grow flex-1'>
-            <Navbar />
+    <html lang="en">
+      <body>
+        <main className='flex'>
+          <div className='flex-none w-60'>
+            <DashboardSideBar />
+          </div>
+          <div className='flex-grow-4'>
+            <DashboardNavbar />
             {children}
           </div>
         </main>
