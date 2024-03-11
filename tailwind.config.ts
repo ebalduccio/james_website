@@ -80,6 +80,9 @@ module.exports = {
         'blackbg': 'url(/BlackBackground.svg)',
         'homebg': 'url(/Homepage.jpg)',
       },
+      FlexGrow: {
+        '4' : '4',
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
