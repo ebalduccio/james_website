@@ -37,33 +37,6 @@ export const Slides = [
     },
 ];
 
-export const FooterQuickLinks = [
-    {
-        label: 'Home',
-        href: '/'
-    },
-    {
-        label: 'Biography',
-        href: '/biography'
-    },
-    {
-        label: 'Investor Acumen',
-        href: '/investoracumen'
-    },
-    {
-        label: 'Publications',
-        href: '/publications'
-    },
-    {
-        label: 'Social Media',
-        href: '/socialmedia'
-    },
-    {
-        label: 'Personal Blog',
-        href: '/personalblog'
-    },
-]
-
 export const FooterResources = [
     {
         label: "Faq's",
