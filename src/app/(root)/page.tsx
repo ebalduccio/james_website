@@ -114,20 +114,8 @@ export default function Home() {
             />
           </div>
           <div className="flex flex-col lg:flex-row mt-16 gap-20 items-center text-white text-center justify-center">
-            <div className="w-96 h-96 font-roboto rounded-xl bg-neutral-500 hover:bg-black duration-100 hover:border">
-              <div className="flex flex-col mx-5 items-center h-full justify-center gap-10">
-                <h2 className="text-4xl">
-                  Title
-                </h2>
-                <p className="text-lg">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-              </div>
-            </div>
-            <div className="w-96 h-96 font-roboto rounded-xl bg-neutral-500 hover:bg-black duration-100 hover:border">
-              <div className="flex flex-col mx-5 items-center h-full justify-center gap-10">
+            <div className="w-[39rem] h-96 font-roboto rounded-xl bg-neutral-500 hover:bg-neutral-700 duration-100">
+              <div className="flex flex-col mx-5 items-center h-full justify-center gap-16">
                 <h2 className="text-4xl">
                   Title
                 </h2>
@@ -201,6 +189,14 @@ export default function Home() {
               <div>
                 <Link href={'/'}>
                   <Image
+                    src={SeekingAlphaMd}
+                    alt="seeking alpha md"
+                  />
+                </Link>
+              </div>
+              <div>
+                <Link href={'/'}>
+                  <Image
                     src={InvestingMd}
                     alt="investing md"
                   />
@@ -211,14 +207,6 @@ export default function Home() {
                   <Image
                     src={TheStreetMd}
                     alt="the street md"
-                  />
-                </Link>
-              </div>
-              <div>
-                <Link href={'/'}>
-                  <Image
-                    src={SeekingAlphaMd}
-                    alt="seeking alpha md"
                   />
                 </Link>
               </div>
