@@ -76,7 +76,7 @@ export default function Biography() {
                     </div>
                 </MaxWidthWrapper>
             </section>
-            <section className="h-[120rem] md:h-[120rem] lg:h-[70rem] bg-whitebg bg-cover bg-center">
+            <section className="h-[120rem] md:h-[120rem] bg-whitebg bg-cover bg-center">
                 <MaxWidthWrapper>
                     <SectionTitle TextColor="black" VectorColor="Black" title="Interests" />
                     <div className="mt-20 flex flex-col md:grid grid-cols-2 items-center gap-24">
@@ -99,7 +99,7 @@ export default function Biography() {
                     </div>
                 </MaxWidthWrapper>
             </section>
-            <section className="h-[85rem] sm:h-[80rem] bg-blackbg bg-center bg-cover bg-no-repeat bg-neutral-600">
+            <section className="h-[85rem] sm:h-[75rem] bg-blackbg bg-center bg-cover bg-no-repeat bg-neutral-600">
                 <MaxWidthWrapper>
                     <SectionTitle TextColor="white" VectorColor="White" title="Personal Blog" />
                     <div className="flex flex-col gap-20 lg:flex-row lg:justify-between items-center">
