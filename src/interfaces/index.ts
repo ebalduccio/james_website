@@ -3,4 +3,5 @@ interface TitleProps {
     subtitle?: string
     VectorColor: string
     TextColor: string
+    className?: string
 }
