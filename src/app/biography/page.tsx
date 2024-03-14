@@ -76,10 +76,10 @@ export default function Biography() {
                     </div>
                 </MaxWidthWrapper>
             </section>
-            <section className="h-[120rem] md:h-[120rem] bg-whitebg bg-cover bg-center">
+            <section className="h-[120rem] lg:h-[80rem] bg-whitebg bg-cover bg-center">
                 <MaxWidthWrapper>
                     <SectionTitle TextColor="black" VectorColor="Black" title="Interests" />
-                    <div className="mt-20 flex flex-col md:grid grid-cols-2 items-center gap-24">
+                    <div className="mt-20 flex flex-col lg:grid grid-cols-2 items-center gap-24">
                         <div className="grid grid-cols-2 items-center gap-14">
                             <InterestsCard />
                             <InterestsCard />
@@ -99,10 +99,10 @@ export default function Biography() {
                     </div>
                 </MaxWidthWrapper>
             </section>
-            <section className="h-[85rem] sm:h-[75rem] bg-blackbg bg-center bg-cover bg-no-repeat bg-neutral-600">
+            <section className="h-[90rem] lg:h-[75rem] bg-blackbg bg-center bg-cover bg-no-repeat bg-neutral-600">
                 <MaxWidthWrapper>
                     <SectionTitle TextColor="white" VectorColor="White" title="Personal Blog" />
-                    <div className="flex flex-col gap-20 lg:flex-row lg:justify-between items-center">
+                    <div className="flex flex-col-reverse pt-24 gap-20 lg:flex-row lg:justify-between items-center">
                         <div className="h-[40rem] w-[40rem] lg:w-[42rem] rounded-lg bg-neutral-400">
                             <div className="pt-px ml-2">
                                 <div className="my-5 mx-5 bg-white rounded-full h-6 flex items-center justify-center w-36">
@@ -118,7 +118,7 @@ export default function Biography() {
                         <div className="text-white text-3xl max-w-lg">
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                             Laudantium aliquam itaque ipsam ad earum laborum obcaecati sed quis placeat,
-                            ut incidunt quibusdam iusto alias maiores molestias quia esse asperiores! Cupiditate?
+                            ut incidunt quibusdam iusto alias maiores molestias quia esse asperi
                         </div>
                     </div>
                 </MaxWidthWrapper>
