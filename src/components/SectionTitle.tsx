@@ -1,10 +1,11 @@
 import Image from 'next/image'
 import React from 'react'
+import { cn } from '@/lib/utils'
 
-function SectionTitle({ title, subtitle, VectorColor, TextColor }: TitleProps) {
+function SectionTitle({ title, subtitle, VectorColor, TextColor, className }: TitleProps) {
     return (
         <>
-            <div className='flex items-center justify-center pt-14'>
+            <div className={cn('flex items-center justify-center pt-14', className)}>
                 <Image
                     src={`${VectorColor}Vector.svg`}
                     alt='vector'
