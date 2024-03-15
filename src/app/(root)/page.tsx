@@ -197,16 +197,16 @@ export default function Home() {
               <div>
                 <Link href={'/'}>
                   <Image
-                    src={InvestingMd}
-                    alt="investing md"
+                    src={TheStreetMd}
+                    alt="the street md"
                   />
                 </Link>
               </div>
               <div>
                 <Link href={'/'}>
                   <Image
-                    src={TheStreetMd}
-                    alt="the street md"
+                    src={InvestingMd}
+                    alt="investing md"
                   />
                 </Link>
               </div>
