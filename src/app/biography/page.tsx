@@ -21,6 +21,7 @@ export default function Biography() {
                     </div>
                 </MaxWidthWrapper>
             </section>
+
             <section className="h-[85rem] lg:h-[55rem] bg-blackbg bg-cover bg-center bg-no-repeat bg-neutral-600"  >
                 <MaxWidthWrapper>
                     <div>
@@ -43,28 +44,39 @@ export default function Biography() {
                     </div>
                 </MaxWidthWrapper>
             </section>
-            <section className="h-[90rem] md:h-[90rem] lg:h-[63rem] bg-whitebg bg-cover bg-no-repeat bg-center">
+
+            <section className="h-[135rem] md:h-[105rem] xl:h-[60rem] bg-whitebg bg-cover bg-no-repeat bg-center">
                 <MaxWidthWrapper>
                     <SectionTitle TextColor="black" VectorColor="Black" title="Curriculum Vitae" />
-                    <div className="flex flex-col lg:flex-row lg:justify-between items-center gap-14 mt-10">
-                        <h1 className="text-2xl max-w-md">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque suscipit sequi,
-                            sint assumenda explicabo laborum architecto voluptates.
-                            Tempore libero placeat illum quas, natus facere repellendus vero voluptatem voluptas,
-                            possimus eum! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit ex beatae nulla minima,
-                            omnis vitae eius, qui voluptatibus optio odio unde? Atque velit consequatur esse iure nesciunt dolorum deserunt dolores.
-                        </h1>
-                        <div className="grid grid-cols-2 items-center gap-10">
-                            <ProfesionCard />
-                            <ProfesionCard />
-                            <ProfesionCard />
-                            <ProfesionCard />
-                            <ProfesionCard />
-                            <ProfesionCard />
+                    <div className="flex flex-col xl:flex-row pt-28 items-center justify-center gap-36">
+                        <div className="flex flex-col items-center gap-24">
+                            <h1 className="text-4xl font-lora">Education</h1>
+                            <p className="text-center text-lg max-w-md">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur inventore,
+                                iusto molestiae laborum in eos est culpa ut vel ullam sed obcaecati modi dolor necessitatibus,
+                                possimus incidunt sapiente voluptatum recusandae!
+                            </p>
+                            <div className="flex flex-col gap-10 md:flex-row">
+                                <ProfesionCard />
+                                <ProfesionCard />
+                            </div>
+                        </div>
+                        <div className="flex flex-col items-center gap-24">
+                            <h1 className="text-4xl font-lora">Profesion</h1>
+                            <p className="text-center text-lg max-w-md">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur inventore,
+                                iusto molestiae laborum in eos est culpa ut vel ullam sed obcaecati modi dolor necessitatibus,
+                                possimus incidunt sapiente voluptatum recusandae!
+                            </p>
+                            <div className="flex flex-col gap-10 md:flex-row">
+                                <ProfesionCard />
+                                <ProfesionCard />
+                            </div>
                         </div>
                     </div>
                 </MaxWidthWrapper>
             </section>
+
             <section className="h-[120rem] lg:h-[75rem] bg-blackbg bg-neutral-600 bg-cover bg-center">
                 <MaxWidthWrapper>
                     <SectionTitle TextColor="white" VectorColor="White" title="Interests" />
@@ -88,6 +100,7 @@ export default function Biography() {
                     </div>
                 </MaxWidthWrapper>
             </section>
+
             <section className="h-[90rem] lg:h-[70rem] bg-whitebg bg-center bg-cover bg-no-repeat">
                 <MaxWidthWrapper>
                     <SectionTitle TextColor="black" VectorColor="Black" title="Personal Blog" />
@@ -112,6 +125,7 @@ export default function Biography() {
                     </div>
                 </MaxWidthWrapper>
             </section>
+
         </>
     )
 }
