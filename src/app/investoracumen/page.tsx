@@ -5,6 +5,7 @@ import Image from "next/image";
 import InvestorAcumenLogo from '../../../public/InvestoracumenBig.svg'
 import InvestorAcumenCard from "@/components/InvestorAcumenCard";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function InvestorAcumenPage() {
     return (
@@ -12,10 +13,12 @@ export default function InvestorAcumenPage() {
             <section className="h-[25rem] bg-whitebg bg-cover bg-no-repeat bg-center">
                 <MaxWidthWrapper>
                     <div className=" py-32 mx-auto flex items-center justify-center">
-                        <Image
-                            src={InvestorAcumenLogo}
-                            alt="Investor Acumen Big Logo"
-                        />
+                        <Link href={'https://www.investoracumen.com/'} target="_blank">
+                            <Image
+                                src={InvestorAcumenLogo}
+                                alt="Investor Acumen Big Logo"
+                            />
+                        </Link>
                     </div>
                 </MaxWidthWrapper>
             </section>
@@ -27,10 +30,12 @@ export default function InvestorAcumenPage() {
                         <InvestorAcumenCard />
                     </div>
                     <div className="flex items-center justify-center lg:justify-end lg:pr-20 pt-2 lg:pt-10">
-                        <Button variant={'investoracumen'}>
-                            Investor Acumen
-                            &rarr;
-                        </Button>
+                        <Link href={'https://www.investoracumen.com/'} target="_blank">
+                            <Button variant={'investoracumen'}>
+                                Investor Acumen
+                                &rarr;
+                            </Button>
+                        </Link>
                     </div>
                 </MaxWidthWrapper>
             </section>
