@@ -187,7 +187,7 @@ export default function Home() {
                 </Link>
               </div>
               <div>
-                <Link href={'/'}>
+                <Link href={'https://seekingalpha.com/author/james-a-kostohryz'}>
                   <Image
                     src={SeekingAlphaMd}
                     alt="seeking alpha md"
@@ -195,7 +195,7 @@ export default function Home() {
                 </Link>
               </div>
               <div>
-                <Link href={'/'}>
+                <Link href={'https://www.thestreet.com/author/james-kostohryz'}>
                   <Image
                     src={TheStreetMd}
                     alt="the street md"
@@ -203,7 +203,7 @@ export default function Home() {
                 </Link>
               </div>
               <div>
-                <Link href={'/'}>
+                <Link href={'https://seekingalpha.com/author/james-a-kostohryz'}>
                   <Image
                     src={InvestingMd}
                     alt="investing md"
