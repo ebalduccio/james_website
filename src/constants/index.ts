@@ -55,22 +55,22 @@ export const FooterResources = [
 export const FooterContact = [
     {
         label: 'Facebook',
-        href: '/personalblog'
+        href: 'https://www.facebook.com/jameskostohryz'
     },
     {
         label: 'Linkedin',
-        href: '/personalblog'
+        href: 'https://www.linkedin.com/in/jameskostohryz/es'
     },
     {
         label: 'Twitter',
-        href: '/personalblog'
+        href: 'https://x.com/jameskostohryz?s=20'
     },
     {
         label: 'Seeking Alpha',
-        href: '/personalblog'
+        href: 'https://seekingalpha.com/author/james-a-kostohryz'
     },
     {
         label: 'Investor Acumen',
-        href: '/personalblog'
+        href: 'https://www.investoracumen.com/'
     },
 ]
