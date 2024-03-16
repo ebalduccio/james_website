@@ -144,10 +144,12 @@ export default function Home() {
             </div>
           </div>
           <div className="w-full justify-center lg:justify-end lg:pr-4 mt-5 lg:mt-6 flex">
-            <Button variant={"grayhome"}>
-              Read more
-              &rarr;
-            </Button>
+            <Link href={'/investoracumen'}>
+              <Button variant={"grayhome"}>
+                Read more
+                &rarr;
+              </Button>
+            </Link>
           </div>
         </MaxWidthWrapper>
       </section>
@@ -165,10 +167,12 @@ export default function Home() {
                 <PublicationHome logo="MiniSeekingAlpha" />
               </div>
               <div className="flex items-center justify-end pr-8 pt-4">
-                <Button variant={'grayhome'}>
-                  Read more
-                  &rarr;
-                </Button>
+                <Link href={'/publications'}>
+                  <Button variant={'grayhome'}>
+                    Read more
+                    &rarr;
+                  </Button>
+                </Link>
               </div>
             </div>
             <div className="hidden lg:block">
