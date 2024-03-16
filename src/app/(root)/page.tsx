@@ -179,7 +179,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col mt-12 gap-28 lg:gap-20">
               <div>
-                <Link href={'https://www.investoracumen.com/'}>
+                <Link href={'https://www.investoracumen.com/'} target="_blank">
                   <Image
                     src={InvestorAcumenMd}
                     alt="investor acumen md"
@@ -187,7 +187,7 @@ export default function Home() {
                 </Link>
               </div>
               <div>
-                <Link href={'https://seekingalpha.com/author/james-a-kostohryz'}>
+                <Link href={'https://seekingalpha.com/author/james-a-kostohryz'} target="_blank">
                   <Image
                     src={SeekingAlphaMd}
                     alt="seeking alpha md"
@@ -195,7 +195,7 @@ export default function Home() {
                 </Link>
               </div>
               <div>
-                <Link href={'https://www.thestreet.com/author/james-kostohryz'}>
+                <Link href={'https://www.thestreet.com/author/james-kostohryz'} target="_blank">
                   <Image
                     src={TheStreetMd}
                     alt="the street md"
@@ -203,7 +203,7 @@ export default function Home() {
                 </Link>
               </div>
               <div>
-                <Link href={'https://seekingalpha.com/author/james-a-kostohryz'}>
+                <Link href={'https://seekingalpha.com/author/james-a-kostohryz'} target="_blank">
                   <Image
                     src={InvestingMd}
                     alt="investing md"
