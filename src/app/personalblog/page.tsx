@@ -1,5 +1,4 @@
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
-import Publication from "@/components/Publication";
 import PublicationPersonal from "@/components/PublicationPersonal";
 import SectionTitle from "@/components/SectionTitle";
 
@@ -15,7 +14,7 @@ export default function PersonalBlogPage() {
             </section>
             <section className="h-[100rem] bg-blackbg bg-center bg-cover bg-no-repeat bg-neutral-600">
                 <MaxWidthWrapper>
-                    <SectionTitle TextColor="white" VectorColor="White" title="Welcome To JK Personal Blog" />
+                    <SectionTitle TextColor="white" VectorColor="White" title="Welcome to James Personal Blog" />
                     <div className="flex flex-col items-center mt-10">
                         <div className="w-[32rem] sm:w-[42rem] lg:w-[50rem] h-[78rem] rounded-md bg-white">
                             <div className="pt-px ml-2">
