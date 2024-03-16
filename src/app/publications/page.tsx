@@ -11,6 +11,7 @@ import TheStreetLogo from '../../../public/TheStreetMd.svg'
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Publication from "@/components/Publication";
+import Link from "next/link";
 
 type DataProps = {
     title: string,
@@ -105,16 +106,16 @@ export default function PublicationsPage() {
                             </div>
                         </div>
                         <div>
-                            <Button variant={'investoracumen'}>
-                                <a href="https://www.investoracumen.com/" target="_blank">
+                            <Link href="https://www.investorLinkcumen.com/" target="_blank">
+                                <Button variant={'investoracumen'}>
                                     Investor Acumen
-                                </a>
-                                &rarr;
-                            </Button>
+                                    &rarr;
+                                </Button>
+                            </Link>
                         </div>
                     </div>
                 </MaxWidthWrapper>
-            </section>
+            </section >
             <section className="h-[67rem] bg-whitebg bg-cover bg-center bg-no-repeat">
                 <MaxWidthWrapper>
                     <div className="flex flex-col items-center gap-4">
@@ -147,12 +148,12 @@ export default function PublicationsPage() {
                             </div>
                         </div>
                         <div>
-                            <Button variant={'seekingalpha'}>
-                                <a href="https://seekingalpha.com/author/james-a-kostohryz" target="_blank">
+                            <Link href="https://seekingalpha.com/author/james-a-kostohryz" target="_blank">
+                                <Button variant={'seekingalpha'}>
                                     Seeking Alpha
-                                </a>
-                                &rarr;
-                            </Button>
+                                    &rarr;
+                                </Button>
+                            </Link>
                         </div>
                     </div>
                 </MaxWidthWrapper>
@@ -189,12 +190,12 @@ export default function PublicationsPage() {
                             </div>
                         </div>
                         <div>
-                            <Button variant={'investing'}>
-                                <a href="https://www.investoracumen.com/" target="_blank">
+                            <Link href="https://www.investing.com" target="_blank">
+                                <Button variant={'investing'}>
                                     Investing
-                                </a>
-                                &rarr;
-                            </Button>
+                                    &rarr;
+                                </Button>
+                            </Link>
                         </div>
                     </div>
                 </MaxWidthWrapper>
@@ -231,12 +232,12 @@ export default function PublicationsPage() {
                             </div>
                         </div>
                         <div>
-                            <Button variant={'thestreet'}>
-                                <a href="https://www.investoracumen.com/" target="_blank">
+                            <Link href="https://www.thestreet.com/author/james-kostohryz" target="_blank">
+                                <Button variant={'thestreet'}>
                                     TheStreet
-                                </a>
-                                &rarr;
-                            </Button>
+                                    &rarr;
+                                </Button>
+                            </Link>
                         </div>
                     </div>
                 </MaxWidthWrapper>
