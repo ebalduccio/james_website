@@ -89,12 +89,12 @@ export default function Home() {
                 banking, energy, construction, real estate, metals and mining. Later,
                 Kostohryz became Global Portfolio Strategist and Head of International Investments for a major investment bank.
               </h2>
-              <div>
+              <Link href={'/biography'}>
                 <Button variant={'grayhome'}>
                   Read More
                   &rarr;
                 </Button>
-              </div>
+              </Link>
             </div>
             <div>
               <Image
@@ -207,7 +207,7 @@ export default function Home() {
                 </Link>
               </div>
               <div>
-                <Link href={'https://seekingalpha.com/author/james-a-kostohryz'} target="_blank">
+                <Link href={'https://www.investing.com'} target="_blank">
                   <Image
                     src={InvestingMd}
                     alt="investing md"
