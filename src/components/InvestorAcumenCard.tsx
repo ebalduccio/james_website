@@ -4,7 +4,7 @@ const InvestorAcumenCard = () => {
     return (
         <>
             <div className='w-[28rem] lg:w-[60rem] sm:w-[35rem] h-[40rem] lg:h-[25rem] bg-white rounded-lg shadow-xl'>
-                <div className='w-64 mt-5 ml-5 bg-gray-200 rounded-full'>
+                <div className='w-64 mt-5 ml-5 bg-gray-200 hover:bg-gray-300 duration-200 rounded-full'>
                     <h1 className='text-2xl text-center px-2 py-4'>
                         Title
                     </h1>
