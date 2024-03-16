@@ -36,7 +36,7 @@ const FooterLinks = () => {
                     <li className='text-base pt-2'>
                         {FooterContact.map((item, index) => {
                             return (
-                                <Link key={index} href={item.href}>
+                                <Link key={index} href={item.href} target='_blank'>
                                     <div className='px-4 py-2 hover:bg-zinc-500 w-38 duration-300 rounded'>
                                         {item.label}
                                     </div>
