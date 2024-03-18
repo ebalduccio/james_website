@@ -205,7 +205,7 @@ export default function PublicationsPage() {
                     <div className="flex flex-col items-center gap-4">
                         <div className='flex items-center justify-center pt-14'>
                             <Image
-                                src={`blackVector.svg`}
+                                src={`BlackVector.svg`}
                                 alt='vector'
                                 width={71}
                                 height={0}
