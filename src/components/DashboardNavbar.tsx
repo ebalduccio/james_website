@@ -9,7 +9,7 @@ function DashboardNavbar() {
         <button className='hover:bg-neutral-600 hover:text-white ml-3 rounded-md h-8 px-3 transition duration-300 ease-in-out flex items-center'>
           <BsList />
         </button>
-        <div className='hover:bg-slate-200 group rounded-md h-16 flex items-center justify-around w-[18rem] transition duration-300 ease-in-out'>
+        <div className='hover:bg-slate-200 group rounded-md h-16 flex items-center justify-around w-[16rem] transition duration-300 ease-in-out'>
           <div className='flex flex-col items-end'>
             <span className='font-bold text-lg'>
               James A. Kostohryz
