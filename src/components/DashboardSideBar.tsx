@@ -4,7 +4,7 @@ import React from 'react'
 
 function DashboardSideBar() {
   return (
-    <div className='bg-neutral-600 text-white'>
+    <aside className='fixed bg-neutral-600 z-50 w-[20rem] h-full text-white'>
       <div className='flex flex-col items-center justify-center'>
         <h1 className='text-5xl pt-10'>
           JK
@@ -16,9 +16,6 @@ function DashboardSideBar() {
           <div>
             New Post
           </div>
-        </div>
-        <div>
-          /
         </div>
       </div>
       <div className='flex flex-col gap-6'>
@@ -32,7 +29,7 @@ function DashboardSideBar() {
           );
         })}
       </div>
-    </div>
+    </aside>
   )
 }
 
