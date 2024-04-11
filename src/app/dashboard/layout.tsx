@@ -1,4 +1,6 @@
 import '../globals.css'
+
+import DashboardContent from '@/components/DashboardContent'
 import DashboardNavbar from '@/components/DashboardNavbar'
 import DashboardSideBar from '@/components/DashboardSideBar'
 
@@ -15,15 +17,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <main className='flex'>
-          <div className='flex-none w-60'>
-            <DashboardSideBar />
-          </div>
-          <div className='flex-grow-4'>
-            <DashboardNavbar />
+        <div className='flex min-h-screen'>
+          <DashboardSideBar />
+          <DashboardNavbar />
+          <DashboardContent>
             {children}
-          </div>
-        </main>
+          </DashboardContent>
+        </div>
       </body>
     </html>
   )
