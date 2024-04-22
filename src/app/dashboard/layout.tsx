@@ -1,8 +1,8 @@
 import '../globals.css'
 
-import DashboardContent from '@/components/DashboardContent'
-import DashboardNavbar from '@/components/DashboardNavbar'
-import DashboardSideBar from '@/components/DashboardSideBar'
+import DashboardContent from '@/app/dashboard/components/DashboardContent'
+import DashboardNavbar from '@/app/dashboard/components/DashboardNavbar'
+import DashboardSideBar from '@/app/dashboard/components/DashboardSideBar'
 
 export const metadata = {
   title: 'Dashboard',
