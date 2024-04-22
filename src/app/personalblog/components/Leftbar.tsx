@@ -8,7 +8,7 @@ const Leftbar = () => {
                 <div className='flex flex-col gap-6 w-48 ml-4 mt-4 transition duration-300'>
                     {SIDEBARPB.map((item, index) => {
                         return (
-                            <SidebarMenuItems item={item} />
+                            <SidebarMenuItems key={index} item={item} />
                         )
                     })}
                 </div>
