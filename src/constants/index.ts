@@ -1,6 +1,3 @@
-import { SideNavItems } from "@/types/types";
-import { PlusIcon } from "lucide-react";
-
 export const NavItems = [
     {
         label: 'Home',
