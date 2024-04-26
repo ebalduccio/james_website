@@ -11,6 +11,9 @@ export default function PersonalBlog() {
                     <PBPost />
                     <PBPost />
                     <PBPost />
+                    <PBPost />
+                    <PBPost />
+                    <PBPost />
                 </div>
             </div>
         </>
