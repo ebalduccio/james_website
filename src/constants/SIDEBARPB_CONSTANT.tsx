@@ -6,22 +6,22 @@ import { IoSettingsOutline } from "react-icons/io5";
 export const SIDEBARPB:SideBarPbItems[]=[
     {
         title: 'Main Feed',
-        href: '/',
+        href: '/personalblog',
         icon: <IoHome size={20} />
     },
     {
         title: 'Search',
-        href:  '/search',
+        href:  '/personalblog/search',
         icon: <IoIosSearch size={20} />
     },
     {
         title: 'Preferences',
-        href: '/preferences',
+        href: '/personalblog/preferences',
         icon: <IoSettingsOutline size={20} />
     },
     {
         title: 'Topics',
-        href: '/topics',
+        href: '/personalblog/topics',
         subMenu: true,
         subMenuItem: [
             {title: 'Topic 1', href:'/topic_1'},
@@ -30,7 +30,7 @@ export const SIDEBARPB:SideBarPbItems[]=[
     },
     {
         title: 'Another',
-        href: '/another',
+        href: '/personalblog/another',
         subMenu: true,
         subMenuItem: [
             {title: 'Another 1', href:'/another_1'},
