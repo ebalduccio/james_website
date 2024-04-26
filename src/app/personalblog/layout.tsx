@@ -21,18 +21,18 @@ export default function RootLayout({
     <html lang="en" className='h-full '>
       <body className={cn('relative h-full antialiased font-roboto')}>
         <main className='absolute sm:relative flex flex-col min-h-screen'>
-          <div className='flex-grow flex-1'>
-            <Navbar />
-              <SectionTitle TextColor='black' VectorColor='Black' title='Personal Blog' />
-              <MaxWidthWrapper className='items-center justify-center'>
-                <div className='flex pt-10'>
-                  <Leftbar className='border-r border-neutral-600'/>
-                  <BlogContent>
-                    {children}
-                  </BlogContent>
-                  <RightbarPB />
-                </div>
-              </MaxWidthWrapper>
+          <Navbar />
+          <div className='flex-grow flex-1 bg-slate-50'>
+            <SectionTitle TextColor='black' VectorColor='Black' title='Personal Blog' />
+            <MaxWidthWrapper className='items-center justify-center'>
+              <div className='flex pt-10'>
+                <Leftbar className='border-r border-neutral-600' />
+                <BlogContent>
+                  {children}
+                </BlogContent>
+                <RightbarPB />
+              </div>
+            </MaxWidthWrapper>
           </div>
         </main>
       </body>
