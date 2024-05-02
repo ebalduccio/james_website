@@ -12,7 +12,6 @@ const PBPost = () => {
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem iure unde consectetur excepturi!
                     Deleniti mollitia, similique saepe quisquam animi magni est aut libero? Et eligendi libero quasi ea ut reiciendis!
                     Deleniti mollitia, similique saepe quisquam animi magni est aut libero? Et eligendi libero quasi ea ut reiciendis!
-                    Deleniti mollitia, similique saepe quisquam animi magni est aut libero? Et eligendi libero quasi ea ut reiciendis!
                 </p>
             </div>
         </div>
