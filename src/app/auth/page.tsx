@@ -5,6 +5,7 @@ import Image from "next/image";
 import authfb from '../../../public/AuthFacebook.svg'
 import authld from '../../../public/AuthLinkedin.svg'
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function AuthPage() {
     return (
@@ -15,9 +16,11 @@ export default function AuthPage() {
                     <div className="flex flex-col items-center mt-20">
                         <div className="w-[30rem] sm:w-[40rem] h-[26rem] relative bg-stone-500 rounded-3xl">
                             <div className="absolute right-24 bottom-[21.6rem]">
-                                <p className="text-blue-200">
-                                    What is Profile Id?
-                                </p>
+                                <Link href={'pid-help'}>
+                                    <p className="text-blue-400 hover:text-blue-200 transition duration-300 underline">
+                                        What is Profile Id?
+                                    </p>
+                                </Link>
                             </div>
                             <div className="flex flex-col gap-5 h-full items-center justify-center">
                                 <div className="flex gap-4 items-center">

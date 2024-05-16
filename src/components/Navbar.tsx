@@ -36,10 +36,12 @@ const Navbar = () => {
                             <NavLinks />
                         </div>
                         <div className='hidden lg:flex items-center'>
-                            <Button variant={'grayhome'}>
-                                Authorization
-                                &rarr;
-                            </Button>
+                            <Link href={'/auth'}>
+                                <Button variant={'grayhome'}>
+                                    Authorization
+                                    &rarr;
+                                </Button>
+                            </Link>
                         </div>
                     </MaxWidthWrapper>
                 </header>

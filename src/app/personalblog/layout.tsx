@@ -1,3 +1,5 @@
+'use client'
+
 import '../globals.css'
 import { cn } from '@/lib/utils'
 import Navbar from '@/components/Navbar'
@@ -7,12 +9,7 @@ import Leftbar from './components/Leftbar'
 import MaxWidthWrapper from '@/components/MaxWidthWrapper'
 import SectionTitle from '@/components/SectionTitle'
 
-export const metadata = {
-  title: 'Personal Blog',
-  description: 'Personal Blog of James A. Kostohryz',
-}
-
-export default function RootLayout({
+export default function PersonalLayout({
   children,
 }: {
   children: React.ReactNode
