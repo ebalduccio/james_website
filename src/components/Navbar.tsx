@@ -47,7 +47,7 @@ const Navbar = () => {
                 </header>
             </div>
             {/*Mobile Nav*/}
-            <div className={`lg: z-10 pt-20 bg-white fixed border-r w-72 h-full duration-500 ${open ? 'left-0' : 'left-[-100%]'}`}>
+            <div className={`z-10 pt-20 bg-white fixed border-r w-72 h-full duration-500 ${open ? 'left-0' : 'left-[-100%]'}`}>
                 <div className='h-screen w-full'>
                     <div className='flex flex-col w-full justify-start gap-8'>
                         <div className='flex w-full overflow-hidden flex-col mt-2 gap-8'>
