@@ -9,17 +9,33 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@neondatabase/serverless": "^0.9.3",
     "@radix-ui/react-slot": "^1.0.2",
+    "@tanstack/react-table": "^8.17.3",
+    "@vercel/analytics": "^1.2.2",
     "axios": "^1.6.5",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
+    "dotenv": "^16.4.5",
+    "drizzle-kit": "^0.21.1",
+    "drizzle-orm": "^0.30.10",
     "lucide-react": "^0.295.0",
+    "mysql2": "^3.10.0",
     "next": "14.0.4",
+    "next-auth": "5.0.0-beta.18",
+    "prop-types": "^15.8.1",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^4.12.0",
+    "server-only": "^0.0.1",
     "tailwind-merge": "^2.1.0",
     "tailwindcss-animate": "^1.0.7"
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "none"
   },
   "devDependencies": {
     "@types/node": "^20",

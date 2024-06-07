@@ -4,11 +4,11 @@ import { PlusIcon } from "lucide-react";
 export const SIDENAV_ITEMS:SideNavItems[]=[
     {
         title: 'All Posts',
-        href: '/posts',
+        href: '/dashboard/all-posts',
     },
     {
         title: 'New Post',
-        href:  '/create-post',
+        href:  '/dashboard/new-post',
         icon: <PlusIcon size={20}/>
     },
     {
