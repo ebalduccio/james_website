@@ -40,7 +40,6 @@ export async function getUsers(
     return { users: rows as User[], newOffset: null };
   }
 
-  // Aqui usamos a interpolação de strings para incluir o offset diretamente na consulta
   const [moreUsers] = await connection.execute(
     `SELECT * FROM users LIMIT 20 OFFSET ${offset}`
   );

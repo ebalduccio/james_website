@@ -1,7 +1,7 @@
 import '../globals.css';
 
 import Link from 'next/link';
-// import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from '@vercel/analytics/react';
 import { Logo, SettingsIcon, UsersIcon, VercelLogo } from '@/components/icons';
 import { User } from './user';
 import { NavItem } from './nav-item';
@@ -33,21 +33,42 @@ export default function RootLayout({
               </div>
               <div className="flex-1 overflow-auto py-2">
                 <nav className="grid items-start px-4 text-sm font-medium">
-                  <NavItem href="/">
+                  <NavItem href="/dashboard">
                     <UsersIcon className="h-4 w-4" />
-                    Posts
+                    Users
                   </NavItem>
-                  <NavItem href="/">
+                  <NavItem href="/dashboard/all-posts">
+                    <UsersIcon className="h-4 w-4" />
+                    All Posts
+                  </NavItem>
+                  <NavItem href="/dashboard/new-post">
                     <UsersIcon className="h-4 w-4" />
                     New Post
                   </NavItem>
-                  <NavItem href="/settings">
+                  <NavItem href="/dashboard/settings">
                     <SettingsIcon className="h-4 w-4" />
                     Settings
                   </NavItem>
-                  <NavItem href="https://vercel.com/templates/next.js/admin-dashboard-tailwind-postgres-react-nextjs">
-                    <VercelLogo className="h-4 w-4" />
-                    Deploy
+                  <div className='w-full h-px bg-black'>
+
+                  </div>
+                  <NavItem href="/">
+                    Home
+                  </NavItem>
+                  <NavItem href="/">
+                    Biography
+                  </NavItem>
+                  <NavItem href="/">
+                    Investor Acumen
+                  </NavItem>
+                  <NavItem href="/">
+                    Publications
+                  </NavItem>
+                  <NavItem href="/">
+                    Social Media
+                  </NavItem>
+                  <NavItem href="/">
+                    Personal Blog
                   </NavItem>
                 </nav>
               </div>
@@ -59,15 +80,14 @@ export default function RootLayout({
                 className="flex items-center gap-2 font-semibold lg:hidden"
                 href="/"
               >
-                <Logo />
-                <span className="">ACME</span>
+                <span className="">James A. Kostohryz</span>
               </Link>
               <User />
             </header>
             {children}
           </div>
         </div>
-        {/* <Analytics /> */}
+        <Analytics />
       </body>
     </html>
   );
