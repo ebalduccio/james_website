@@ -13,7 +13,6 @@ import { ContentState, convertToRaw } from 'draft-js';
 import htmlToDraft from 'html-to-draftjs';
 import 'react-quill/dist/quill.snow.css';
 
-// Import ReactQuill dynamically to avoid SSR issues
 const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
 
 const NewPostForm: React.FC = () => {
@@ -29,12 +28,10 @@ const NewPostForm: React.FC = () => {
 
   const onSubmit = async (data: PostSchema) => {
     try {
-      // Convert HTML content to DraftJS ContentState
       const contentBlock = htmlToDraft(content);
       const contentState = ContentState.createFromBlockArray(contentBlock.contentBlocks);
       const rawContentState = convertToRaw(contentState);
 
-      // Include the JSON content in the data to be sent
       await createPost({ ...data, content: JSON.stringify(rawContentState) });
       alert('Post created successfully');
     } catch (error) {
