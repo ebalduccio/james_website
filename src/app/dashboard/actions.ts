@@ -1,9 +1,9 @@
 'use server';
 
-import { deletePostById } from '@/lib/api';
+import { deletePost } from '@/lib/api';
 import { revalidatePath } from 'next/cache';
 
-export async function deletePost(postId: number) {
-  await deletePostById(postId);
+export async function deletePostById(postId: number) {
+  await deletePost(postId);
   revalidatePath('/');
 }
