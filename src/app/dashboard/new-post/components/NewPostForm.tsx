@@ -20,19 +20,24 @@ const NewPostForm: React.FC = () => {
     resolver: zodResolver(postSchema),
   });
 
-  const content = watch('content');
+  const [content, setContent] = useState('');
 
   useEffect(() => {
     register('content');
   }, [register]);
 
-  const onSubmit = async (data: PostSchema) => {
-    try {
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
       const contentBlock = htmlToDraft(content);
       const contentState = ContentState.createFromBlockArray(contentBlock.contentBlocks);
       const rawContentState = convertToRaw(contentState);
+      setValue('content', JSON.stringify(rawContentState));
+    }
+  }, [content, setValue]);
 
-      await createPost({ ...data, content: JSON.stringify(rawContentState) });
+  const onSubmit = async (data: PostSchema) => {
+    try {
+      await createPost({ ...data, content });
       alert('Post created successfully');
     } catch (error) {
       console.error('Error creating post:', error);
@@ -51,7 +56,7 @@ const NewPostForm: React.FC = () => {
 
         <div className="grid w-full gap-2">
           <Label htmlFor="content">Text</Label>
-          <ReactQuill value={content} onChange={(value) => setValue('content', value)} className='w-[30rem] h-[20rem]' />
+          <ReactQuill value={content} onChange={setContent} className='w-[30rem] h-[20rem]' />
           {errors.content && <p className='text-red-700 text-ms pl-2 font-semibold'>{errors.content.message}</p>}
           <Button type="submit" className='mt-[4rem]'>Publish</Button>
         </div>
