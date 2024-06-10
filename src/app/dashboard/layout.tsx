@@ -3,7 +3,6 @@ import '../globals.css';
 import Link from 'next/link';
 import { Analytics } from '@vercel/analytics/react';
 import { PlusIcon, PostIcon, SettingsIcon } from '@/components/icons';
-import { User } from './user';
 import { NavItem } from './nav-item';
 
 export const metadata = {
@@ -78,7 +77,6 @@ export default function RootLayout({
               >
                 <span className="">James A. Kostohryz</span>
               </Link>
-              <User />
             </header>
             {children}
           </div>
