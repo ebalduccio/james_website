@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { postSchema, PostSchema } from '../../../schemas/postSchema';
@@ -8,20 +8,34 @@ import { createPost } from '@/lib/api';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Textarea } from '@/components/ui/textarea';
+import dynamic from 'next/dynamic';
+import { ContentState, convertToRaw } from 'draft-js';
+import htmlToDraft from 'html-to-draftjs';
+import 'react-quill/dist/quill.snow.css';
+
+// Import ReactQuill dynamically to avoid SSR issues
+const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
 
 const NewPostForm: React.FC = () => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors }
-  } = useForm<PostSchema>({
+  const { register, handleSubmit, setValue, watch, formState: { errors } } = useForm<PostSchema>({
     resolver: zodResolver(postSchema),
   });
 
+  const content = watch('content');
+
+  useEffect(() => {
+    register('content');
+  }, [register]);
+
   const onSubmit = async (data: PostSchema) => {
     try {
-      await createPost(data);
+      // Convert HTML content to DraftJS ContentState
+      const contentBlock = htmlToDraft(content);
+      const contentState = ContentState.createFromBlockArray(contentBlock.contentBlocks);
+      const rawContentState = convertToRaw(contentState);
+
+      // Include the JSON content in the data to be sent
+      await createPost({ ...data, content: JSON.stringify(rawContentState) });
       alert('Post created successfully');
     } catch (error) {
       console.error('Error creating post:', error);
@@ -34,17 +48,17 @@ const NewPostForm: React.FC = () => {
       <div className='flex flex-col gap-10 pt-10'>
         <div className="grid w-full max-w-sm items-center gap-1.5">
           <Label htmlFor="title">Title</Label>
-          <Input id="content" placeholder="Title" {...register('title')} />
+          <Input id="title" placeholder="Title" {...register('title')} />
           {errors.title && <p className='text-red-700 text-ms pl-2 font-semibold'>{errors.title.message}</p>}
         </div>
 
         <div className="grid w-full gap-2">
           <Label htmlFor="content">Text</Label>
-          <Textarea placeholder="Type some rich text here..." className='w-[30rem] h-[20rem]' {...register('content')} />
+          <ReactQuill value={content} onChange={(value) => setValue('content', value)} className='w-[30rem] h-[20rem]' />
           {errors.content && <p className='text-red-700 text-ms pl-2 font-semibold'>{errors.content.message}</p>}
-          <Button>Publish</Button>
+          <Button type="submit" className='mt-[4rem]'>Publish</Button>
         </div>
-      </div >
+      </div>
     </form>
   );
 };
