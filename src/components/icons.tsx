@@ -124,3 +124,31 @@ export function VercelLogo(props: React.SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
+
+export function PostIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg {...props} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g clip-path="url(#clip0_740_645)">
+        <path d="M20.8544 0.859863H8.28893C7.02641 0.859863 6.00293 1.88334 6.00293 3.14586V19.2469C6.00293 20.5094 7.02641 21.5329 8.28893 21.5329H20.8544C22.117 21.5329 23.1404 20.5094 23.1404 19.2469V3.14586C23.1404 1.88334 22.117 0.859863 20.8544 0.859863Z" stroke="black" stroke-width="2" stroke-linecap="round" />
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.28605 6H19.7139V18C19.7139 20.0198 18.551 22.1531 16.2857 23.1427H0.857422C2.63342 21.8505 4.48517 20.6093 4.28605 18V6Z" fill="#0D0000" stroke="black" stroke-width="2" stroke-linejoin="round" />
+      </g>
+      <defs>
+        <clipPath id="clip0_740_645">
+          <rect width="24" height="24" fill="white" />
+        </clipPath>
+      </defs>
+    </svg>
+
+  )
+}
+
+export function PlusIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg {...props} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 8.32715V15.6541" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M15.667 11.9902H8.33301" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.6857 2H7.31429C4.04762 2 2 4.31208 2 7.58516V16.4148C2 19.6879 4.0381 22 7.31429 22H16.6857C19.9619 22 22 19.6879 22 16.4148V7.58516C22 4.31208 19.9619 2 16.6857 2Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+
+  )
+}
