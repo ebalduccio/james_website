@@ -315,6 +315,8 @@ const ToolsButton = forwardRef<HTMLSpanElement, Propsb>(
   }
 );
 
+ToolsButton.displayName = 'ToolsButton';
+
 const BlockButton = ({ format, icon }: any) => {
   const editor = useSlate();
   return (
