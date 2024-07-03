@@ -1,21 +1,11 @@
 import '../globals.css';
-
 import Link from 'next/link';
 import { Analytics } from '@vercel/analytics/react';
 import { PlusIcon, PostIcon, SettingsIcon } from '@/components/icons';
 import { NavItem } from './nav-item';
+import withAuth from '@/components/withAuth';
 
-export const metadata = {
-  title: 'Dashboard',
-  description:
-    'Admin Dashboard'
-};
-
-export default function RootLayout({
-  children
-}: {
-  children: React.ReactNode;
-}) {
+const DashboardLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <html lang="en" className="h-full bg-gray-50">
       <body>
@@ -44,27 +34,13 @@ export default function RootLayout({
                     <SettingsIcon className="h-4 w-4" />
                     Settings
                   </NavItem>
-                  <div className='w-full h-px bg-black'>
-
-                  </div>
-                  <NavItem href="/">
-                    Home
-                  </NavItem>
-                  <NavItem href="/">
-                    Biography
-                  </NavItem>
-                  <NavItem href="/">
-                    Investor Acumen
-                  </NavItem>
-                  <NavItem href="/">
-                    Publications
-                  </NavItem>
-                  <NavItem href="/">
-                    Social Media
-                  </NavItem>
-                  <NavItem href="/">
-                    Personal Blog
-                  </NavItem>
+                  <div className='w-full h-px bg-black'></div>
+                  <NavItem href="/">Home</NavItem>
+                  <NavItem href="/">Biography</NavItem>
+                  <NavItem href="/">Investor Acumen</NavItem>
+                  <NavItem href="/">Publications</NavItem>
+                  <NavItem href="/">Social Media</NavItem>
+                  <NavItem href="/">Personal Blog</NavItem>
                 </nav>
               </div>
             </div>
@@ -86,3 +62,5 @@ export default function RootLayout({
     </html>
   );
 }
+
+export default withAuth(DashboardLayout);

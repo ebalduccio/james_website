@@ -1,13 +1,28 @@
+'use client';
+
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import SectionTitle from "@/components/SectionTitle";
-
-import Image from "next/image";
-import authfb from '../../../public/AuthFacebook.svg'
-import authld from '../../../public/AuthLinkedin.svg'
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import { useRouter } from 'next/router';
 
-export default function AuthPage() {
+const ADMIN_USERNAME = 'admin';
+const ADMIN_PASSWORD = 'password123';
+
+const AuthPage: React.FC = () => {
+    const [username, setUsername] = useState<string>("");
+    const [password, setPassword] = useState<string>("");
+    const router = useRouter();
+
+    const handleLogin = () => {
+        if (username === ADMIN_USERNAME && password === ADMIN_PASSWORD) {
+            localStorage.setItem("auth", "true");
+            router.push("/dashboard");
+        } else {
+            alert("Invalid credentials");
+        }
+    };
+
     return (
         <>
             <section className="h-[60rem] bg-whitebg bg-cover bg-center bg-no-repeat">
@@ -15,39 +30,27 @@ export default function AuthPage() {
                     <SectionTitle TextColor="black" VectorColor="Black" title="James A. Kostohryz" subtitle="Authentication" />
                     <div className="flex flex-col items-center mt-20">
                         <div className="w-[30rem] sm:w-[40rem] h-[26rem] relative bg-stone-500 rounded-3xl">
-                            <div className="absolute right-24 bottom-[21.6rem]">
-                                <Link href={'pid-help'}>
-                                    <p className="text-blue-400 hover:text-blue-200 transition duration-300 underline">
-                                        What is Profile Id?
-                                    </p>
-                                </Link>
-                            </div>
                             <div className="flex flex-col gap-5 h-full items-center justify-center">
                                 <div className="flex gap-4 items-center">
-                                    <div>
-                                        <Image
-                                            src={authfb}
-                                            alt="auth fb icon"
-                                        />
-                                    </div>
-                                    <div>
-                                        <input type="text" className="h-10 w-[16rem] pl-2 rounded-md" />
-                                    </div>
+                                    <input
+                                        type="text"
+                                        className="h-10 w-[16rem] pl-2 rounded-md"
+                                        placeholder="Username"
+                                        value={username}
+                                        onChange={(e) => setUsername(e.target.value)}
+                                    />
                                 </div>
-                                <p className="text-white text-center text-lg">Or</p>
-                                <div className="flex items-center">
-                                    <div className="pr-2">
-                                        <Image
-                                            src={authld}
-                                            alt="auth fb icon"
-                                        />
-                                    </div>
-                                    <div className="">
-                                        <input type="text" className="h-10 w-[16rem] pl-2 rounded-md" />
-                                    </div>
+                                <div className="flex gap-4 items-center">
+                                    <input
+                                        type="password"
+                                        className="h-10 w-[16rem] pl-2 rounded-md"
+                                        placeholder="Password"
+                                        value={password}
+                                        onChange={(e) => setPassword(e.target.value)}
+                                    />
                                 </div>
                                 <div className="pt-10">
-                                    <Button variant={"sucess"} className="px-16">
+                                    <Button variant={"sucess"} className="px-16" onClick={handleLogin}>
                                         Login
                                     </Button>
                                 </div>
@@ -55,7 +58,10 @@ export default function AuthPage() {
                         </div>
                     </div>
                 </MaxWidthWrapper>
-            </section >
+            </section>
         </>
-    )
-}
+    );
+};
+
+export default AuthPage;
+

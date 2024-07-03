@@ -1,18 +1,28 @@
 'use client'
 
-import Image from 'next/image'
-import Burguer from '../../public/Hamburguer.svg'
-import Close from '../../public/Cancel.svg'
+import Image from 'next/image';
+import Burguer from '../../public/Hamburguer.svg';
+import Close from '../../public/Cancel.svg';
+import React, { useState, useEffect } from 'react';
+import MaxWidthWrapper from './MaxWidthWrapper';
+import Link from 'next/link';
+import { Button } from './ui/button';
+import NavLinks from './NavLinks';
+import NavLinksMobile from './NavLinksMobile';
 
-import React, { useState } from 'react'
-import MaxWidthWrapper from './MaxWidthWrapper'
-import Link from 'next/link'
-import { Button } from './ui/button'
-import NavLinks from './NavLinks'
-import NavLinksMobile from './NavLinksMobile'
+const Navbar: React.FC = () => {
+    const [open, setOpen] = useState(false);
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-const Navbar = () => {
-    const [open, setOpen] = useState<boolean>(false)
+    useEffect(() => {
+        const auth = localStorage.getItem("auth");
+        setIsAuthenticated(auth === "true");
+    }, []);
+
+    const handleLogout = () => {
+        localStorage.removeItem("auth");
+        setIsAuthenticated(false);
+    };
 
     return (
         <>
@@ -36,12 +46,26 @@ const Navbar = () => {
                             <NavLinks />
                         </div>
                         <div className='hidden lg:flex items-center'>
-                            <Link href={'/auth'}>
-                                <Button variant={'grayhome'}>
-                                    Authorization
-                                    &rarr;
-                                </Button>
-                            </Link>
+                            {isAuthenticated ? (
+                                <>
+                                    <Link href={'/dashboard'}>
+                                        <Button variant={'grayhome'}>
+                                            Dashboard
+                                            &rarr;
+                                        </Button>
+                                    </Link>
+                                    <Button variant={'grayhome'} onClick={handleLogout}>
+                                        Logout
+                                    </Button>
+                                </>
+                            ) : (
+                                <Link href={'/auth'}>
+                                    <Button variant={'grayhome'}>
+                                        Authorization
+                                        &rarr;
+                                    </Button>
+                                </Link>
+                            )}
                         </div>
                     </MaxWidthWrapper>
                 </header>
@@ -54,18 +78,32 @@ const Navbar = () => {
                             <NavLinksMobile />
                         </div>
                         <div className='ml-4'>
-                            <Link href={'/auth'}>
-                                <Button variant={'grayhome'}>
-                                    Authorization
-                                    &rarr;
-                                </Button>
-                            </Link>
+                            {isAuthenticated ? (
+                                <>
+                                    <Link href={'/dashboard'}>
+                                        <Button variant={'grayhome'}>
+                                            Dashboard
+                                            &rarr;
+                                        </Button>
+                                    </Link>
+                                    <Button variant={'grayhome'} onClick={handleLogout}>
+                                        Logout
+                                    </Button>
+                                </>
+                            ) : (
+                                <Link href={'/auth'}>
+                                    <Button variant={'grayhome'}>
+                                        Authorization
+                                        &rarr;
+                                    </Button>
+                                </Link>
+                            )}
                         </div>
                     </div>
                 </div>
             </div>
         </>
-    )
-}
+    );
+};
 
-export default Navbar
+export default Navbar;
