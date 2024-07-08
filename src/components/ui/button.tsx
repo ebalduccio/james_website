@@ -16,7 +16,7 @@ const buttonVariants = cva(
         seekingalpha: "bg-orange-500 text-white hover:bg-orange-600 font-roboto",
         investing: "bg-black text-white hover:bg-gray-700 font-roboto",
         send: 'bg-sky-600 text-white hover:bg-sky-900 font-roboto',
-        sucess: 'bg-lime-500 text-white hover:bg-lime-900 font-roboto',
+        sucess: 'bg-lime-500 text-white hover:bg-lime-600 font-medium font-roboto',
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
