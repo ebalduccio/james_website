@@ -9,7 +9,7 @@ interface PBPostProps {
 const PBPost: React.FC<PBPostProps> = ({ title, timestamp, content }) => {
   console.log('PBPost props:', { title, timestamp, content });
   return (
-    <div className='h-[12rem] flex-grow rounded transition duration-250 border-b hover:bg-slate-300 overflow-hidden'>
+    <div className='h-[12rem max-w-[70rem] flex-grow rounded transition duration-250 border-b hover:bg-slate-300 overflow-hidden'>
       <div className='px-3 py-4'>
         <div className='flex flex-col'>
           <span className='text-lg font-bold'>{title}</span>

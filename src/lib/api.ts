@@ -6,16 +6,14 @@ export interface Post {
   id: number;
   title: string;
   content: string;
-  createdAt: string; // Alterado para string para refletir o tipo recebido
-  updatedAt: string; // Corrigido o nome para ser consistente
+  createdAt: string; 
+  updatedAt: string; 
 }
 
-// Função para buscar todos os posts
 export async function getPosts(): Promise<Post[]> {
   try {
     const response = await axios.get(`${API_BASE_URL}`);
     const posts: Post[] = response.data.map((post: any) => {
-      // Conversão da string para Date e formatação
       const createdAtDate = new Date(post.created_at);
       const formattedDate = createdAtDate.toLocaleString();
 
@@ -26,8 +24,8 @@ export async function getPosts(): Promise<Post[]> {
 
       return {
         ...post,
-        content: extractTextFromJson(post.content), // Extrai o texto do JSON
-        createdAt: formattedDate, // Atribui a data formatada
+        content: extractTextFromJson(post.content), 
+        createdAt: formattedDate, 
       };
     });
     return posts;
@@ -41,7 +39,6 @@ export async function getPosts(): Promise<Post[]> {
   }
 }
 
-// Função para buscar um post pelo ID
 export async function getPostById(id: number): Promise<Post> {
   console.log(`Fetching post by ID: ${id}`);
   try {
@@ -50,7 +47,7 @@ export async function getPostById(id: number): Promise<Post> {
     console.log('Fetched post:', post)
     return {
       ...post,
-      content: extractTextFromJson(post.content), // Extrai o texto do JSON
+      content: extractTextFromJson(post.content),
       createdAt: new Date(post.created_at).toLocaleString(),
     };
   } catch (error) {
@@ -63,10 +60,8 @@ export async function getPostById(id: number): Promise<Post> {
   }
 }
 
-// Função para criar um novo post
 export async function createPost(data: Omit<Post, 'id' | 'createdAt' | 'updatedAt'>): Promise<void> {
   try {
-    // Converte o conteúdo para string JSON antes de enviar para o banco de dados
     const postData = {
       ...data,
       content: JSON.stringify(data.content),
@@ -85,10 +80,8 @@ export async function createPost(data: Omit<Post, 'id' | 'createdAt' | 'updatedA
   }
 }
 
-// Função para atualizar um post pelo ID
 export async function updatePost(id: number, data: Omit<Post, 'id' | 'createdAt' | 'updatedAt'>): Promise<void> {
   try {
-    // Converte o conteúdo para string JSON antes de enviar para o banco de dados
     const postData = {
       ...data,
       content: JSON.stringify(data.content),
@@ -105,7 +98,6 @@ export async function updatePost(id: number, data: Omit<Post, 'id' | 'createdAt'
   }
 }
 
-// Função para deletar um post pelo ID
 export async function deletePost(id: number): Promise<void> {
   try {
     await axios.delete(`${API_BASE_URL}/${id}`);
@@ -120,10 +112,8 @@ export async function deletePost(id: number): Promise<void> {
 }
 
 
-// Função auxiliar para extrair texto do conteúdo JSON
 function extractTextFromJson(jsonString: string): string {
   try {
-    // Remove caracteres de escape extras
     const cleanedJsonString = jsonString.replace(/\\n/g, '').replace(/\\"/g, '"').replace(/^"|"$/g, '');
     const jsonObject = JSON.parse(cleanedJsonString);
     return extractText(jsonObject);
@@ -133,7 +123,6 @@ function extractTextFromJson(jsonString: string): string {
   }
 }
 
-// Função recursiva para extrair texto
 function extractText(obj: any): string {
   let text = '';
 

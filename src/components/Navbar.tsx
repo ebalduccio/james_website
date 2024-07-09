@@ -10,10 +10,12 @@ import { Button } from './ui/button';
 import NavLinks from './NavLinks';
 import NavLinksMobile from './NavLinksMobile';
 import { useAuth } from '@/context/AuthContext';
+import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
+import { DropdownMenuF } from './DropdownMenuF';
 
 const Navbar: React.FC = () => {
   const [open, setOpen] = useState(false);
-  const { isAuthenticated, logout } = useAuth();
+  const { isAuthenticated } = useAuth();
 
   return (
     <>
@@ -40,15 +42,7 @@ const Navbar: React.FC = () => {
               {isAuthenticated ? (
                 <>
                   <div className='flex items-center gap-2'>
-                    <Link href={'/dashboard'}>
-                      <Button variant={'grayhome'}>
-                        Dashboard
-                        &rarr;
-                      </Button>
-                    </Link>
-                    <Button variant={'grayhome'} onClick={logout}>
-                      Logout
-                    </Button>
+                    <DropdownMenuF />
                   </div>
                 </>
               ) : (
@@ -80,9 +74,10 @@ const Navbar: React.FC = () => {
                         &rarr;
                       </Button>
                     </Link>
-                    <Button variant={'grayhome'} className='mx-2' onClick={logout}>
-                      Logout
-                    </Button>
+                    <Avatar>
+                      <AvatarImage />
+                      <AvatarFallback>JK</AvatarFallback>
+                    </Avatar>
                   </div>
                 </>
               ) : (
