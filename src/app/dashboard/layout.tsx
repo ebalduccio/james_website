@@ -65,11 +65,11 @@ const ProtectedDashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) 
                 </NavItem>
                 <div className='w-full h-px bg-black'></div>
                 <NavItem href="/">Home</NavItem>
-                <NavItem href="/">Biography</NavItem>
-                <NavItem href="/">Investor Acumen</NavItem>
-                <NavItem href="/">Publications</NavItem>
-                <NavItem href="/">Social Media</NavItem>
-                <NavItem href="/">Personal Blog</NavItem>
+                <NavItem href="/biography">Biography</NavItem>
+                <NavItem href="/investoracumen">Investor Acumen</NavItem>
+                <NavItem href="/publications">Publications</NavItem>
+                <NavItem href="/socialmedia">Social Media</NavItem>
+                <NavItem href="/personalblog">Personal Blog</NavItem>
               </nav>
             </div>
           </div>
