@@ -48,7 +48,7 @@ const Navbar: React.FC = () => {
               ) : (
                 <Link href={'/login'}>
                   <Button variant={'grayhome'}>
-                    Authorization
+                    Login
                     &rarr;
                   </Button>
                 </Link>
@@ -83,7 +83,7 @@ const Navbar: React.FC = () => {
               ) : (
                 <Link href={'/login'}>
                   <Button variant={'grayhome'}>
-                    Authorization
+                    Login
                     &rarr;
                   </Button>
                 </Link>

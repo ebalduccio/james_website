@@ -24,12 +24,14 @@ export default function PersonalLayout({
             <div className='flex-grow flex-1 bg-slate-50'>
               <SectionTitle TextColor='black' VectorColor='Black' title='Personal Blog' />
               <MaxWidthWrapper className='items-center justify-center'>
+                <div className='pt-10'>
+                  <RightbarPB />
+                </div>
                 <div className='flex pt-10'>
                   <Leftbar className='border-r border-neutral-600' />
                   <BlogContent>
                     {children}
                   </BlogContent>
-                  <RightbarPB />
                 </div>
               </MaxWidthWrapper>
             </div>
