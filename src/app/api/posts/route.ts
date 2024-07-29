@@ -3,10 +3,10 @@ import { z } from 'zod';
 import { postSchema } from '../../schemas/postSchema';
 import axios from 'axios';
 
-const API_BASE_URL = process.env.API_BASE_URL;
+const NEXT_PUBLIC_API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
-if (!API_BASE_URL) {
-  throw new Error('API_BASE_URL is not defined');
+if (!NEXT_PUBLIC_API_BASE_URL) {
+  throw new Error('NEXT_PUBLIC_API_BASE_URL is not defined');
 }
 
 export async function POST(req: NextRequest) {
@@ -14,7 +14,7 @@ export async function POST(req: NextRequest) {
     const body = await req.json();
     const parsedData = postSchema.parse(body);
 
-    const response = await axios.post(`${API_BASE_URL}`, {
+    const response = await axios.post(`${NEXT_PUBLIC_API_BASE_URL}`, {
       title: parsedData.title,
       content: parsedData.content,
       content_json: parsedData.content_json,
@@ -35,7 +35,7 @@ export async function POST(req: NextRequest) {
 
 export async function GET() {
   try {
-    const response = await axios.get(`${API_BASE_URL}`);
+    const response = await axios.get(`${NEXT_PUBLIC_API_BASE_URL}`);
     return NextResponse.json(response.data, { status: 200 });
   } catch (error) {
     if (axios.isAxiosError(error)) {

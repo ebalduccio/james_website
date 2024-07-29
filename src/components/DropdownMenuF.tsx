@@ -71,7 +71,7 @@ export function DropdownMenuF() {
               <DropdownMenuShortcut>ctrl+P</DropdownMenuShortcut>
             </DropdownMenuItem>
           </Link>
-          <Link href={'/dashboard/newpost'}>
+          <Link href={'/dashboard/new-post'}>
             <DropdownMenuItem>
               <Plus className="mr-2 h-4 w-4" />
               <span>New Post</span>

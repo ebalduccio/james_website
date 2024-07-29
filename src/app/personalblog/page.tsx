@@ -26,7 +26,7 @@ const PersonalBlog: React.FC = () => {
 
   return (
     <div className="h-full">
-      <div className="grid grid-cols-1 h-full gap-4 items-center justify-center py-4 px-2">
+      <div className="grid grid-cols-1 gap-4 justify-center py-4 px-2">
         {posts.map((post) => (
           <Link href={`/personalblog/posts/${post.id}`} key={post.id}>
               <PBPost
