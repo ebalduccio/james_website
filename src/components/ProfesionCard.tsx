@@ -1,27 +1,26 @@
-import Image from 'next/image'
-import Educationicon from '../../public/Education.svg'
-
 import React from 'react'
+import { LucideIcon, GraduationCap } from 'lucide-react'
 
-const ProfesionCard = () => {
-    return (
-        <div className="h-52 w-60 bg-stone-600 hover:bg-stone-500 duration-200 text-white font-roboto rounded-md"> {/* Reduced height and width */}
-            <div className="mt-2 ml-2 px-1 py-1 flex items-center rounded-lg h-10 w-10 bg-gray-300"> {/* Adjusted spacing and size */}
-                <Image
-                    src={Educationicon}
-                    alt="education icon"
-                />
-            </div>
-            <div className="flex flex-col items-center gap-3 "> {/* Adjusted gap */}
-                <h1 className="text-xl">Title</h1> {/* Smaller text */}
-                <p className="text-[0.7rem] text-center max-w-xs px-3"> {/* Adjusted padding and font size */}
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque cupiditate mollitia delectus in officia illo veniam deserunt aut impedit,
-                    voluptatibus assumenda eligendi atque. Commodi, quos nulla? Facilis praesentium nostrum perferendis.
-                </p>
-            </div>
-        </div>
-
-    )
+interface ProfessionCardProps {
+  title: string;
+  description: string;
+  Icon?: LucideIcon;
 }
 
-export default ProfesionCard
+const ProfessionCard: React.FC<ProfessionCardProps> = ({ title, description, Icon = GraduationCap }) => {
+  return (
+    <div className="bg-white shadow-lg rounded-xl p-6 transition-all duration-300 hover:shadow-xl hover:scale-105">
+      <div className="flex items-center mb-4">
+        <div className="bg-blue-100 p-3 rounded-full mr-4">
+          <Icon className="w-6 h-6 text-blue-600" />
+        </div>
+        <h3 className="text-xl font-semibold text-gray-800">{title}</h3>
+      </div>
+      <p className="text-gray-600 text-sm leading-relaxed">
+        {description}
+      </p>
+    </div>
+  )
+}
+
+export default ProfessionCard

@@ -1,8 +1,6 @@
-import type { Metadata } from 'next'
 import '../globals.css'
 import { cn } from '@/lib/utils'
 import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
 import { AuthProvider } from '@/context/AuthContext'
 import RightbarPB from '../personalblog/components/Rightbar'
 import BlogContent from '../personalblog/components/BlogContent'
@@ -15,7 +13,7 @@ export const metadata = {
   description: 'Publications of James A. Kostohryz',
 }
 
-export default function RootLayout({
+export default function PulicationsLayout({
   children,
 }: {
   children: React.ReactNode

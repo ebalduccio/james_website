@@ -1,27 +1,26 @@
-import Image from 'next/image'
-import Educationicon from '../../public/Education.svg'
-
 import React from 'react'
+import { LucideIcon, BookOpen } from 'lucide-react'
 
-const InterestsCards = () => {
-    return (
-        <div className="h-52 w-60 bg-stone-600 hover:bg-stone-500 duration-200 text-white font-roboto rounded-md"> {/* Reduced height and width */}
-            <div className="mt-2 ml-2 px-1 py-1 flex items-center rounded-lg h-10 w-10 bg-gray-300"> {/* Adjusted spacing and size */}
-                <Image
-                    src={Educationicon}
-                    alt="education icon"
-                />
-            </div>
-            <div className="flex flex-col items-center gap-3 "> {/* Adjusted gap */}
-                <h1 className="text-xl">Title</h1> {/* Smaller text */}
-                <p className="text-[0.7rem] text-center max-w-xs px-3"> {/* Adjusted padding and font size */}
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque cupiditate mollitia delectus in officia illo veniam deserunt aut impedit,
-                    voluptatibus assumenda eligendi atque. Commodi, quos nulla? Facilis praesentium nostrum perferendis.
-                </p>
-            </div>
-        </div>
-
-    )
+interface InterestsCardProps {
+  title: string;
+  description: string;
+  Icon?: LucideIcon;
 }
 
-export default InterestsCards
+const InterestsCard: React.FC<InterestsCardProps> = ({ title, description, Icon = BookOpen }) => {
+  return (
+    <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6 transition-all duration-300 hover:bg-opacity-20 hover:scale-105 group">
+      <div className="flex flex-col items-center text-center">
+        <div className="mb-4 p-3 bg-white bg-opacity-20 rounded-full group-hover:bg-opacity-30 transition-all duration-300">
+          <Icon className="w-8 h-8 text-white" />
+        </div>
+        <h3 className="text-xl font-semibold text-white mb-3">{title}</h3>
+        <p className="text-sm text-gray-300 leading-relaxed">
+          {description}
+        </p>
+      </div>
+    </div>
+  )
+}
+
+export default InterestsCard

@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Loading from "@/components/Loading";
 import Link from "next/link";
-import RecentPost from "../components/RecentPost";
+import RecentPost from "../components/PostCard";
 
 type DataProps = {
     title: string,

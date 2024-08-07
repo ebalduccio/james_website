@@ -3,8 +3,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Loading from "@/components/Loading";
-import Link from "next/link";
-import RecentPost from "../components/RecentPost";
+import PostCard from "../components/PostCard";
 
 type DataProps = {
     title: string,
@@ -22,7 +21,7 @@ const InvestorAcumenPosts = () => {
             try {
                 setIsLoading(true);
                 const response = await axios.get<DataProps[]>('https://appdata.investoracumen.com/james/ia');
-                setPosts(response.data);
+                setPosts(response.data.sort((a, b) => new Date(b.date_pub).getTime() - new Date(a.date_pub).getTime()));
             } catch (error) {
                 console.error("Error fetching posts:", error);
                 setError("Failed to fetch posts. Please try again later.");
@@ -43,19 +42,20 @@ const InvestorAcumenPosts = () => {
     }
 
     return (
-        <div className="py-8 px-8">
-            <h1 className="text-3xl mb-6">Investor Acumen Posts</h1>
+        <div className="py-8 px-4 bg-gray-50">
+            <h2 className="text-3xl font-bold text-gray-800 mb-8">Investor Acumen Publications</h2>
             {posts.length === 0 ? (
-                <p>No posts available at the moment.</p>
+                <p className="text-center text-gray-600">No posts available at the moment.</p>
             ) : (
-                <div className="grid grid-cols-1 gap-4">
+                <div className="space-y-6">
                     {posts.map((post, index) => (
-                        <Link href={post.link} key={index} target="_blank" rel="noopener noreferrer">
-                            <RecentPost
-                                title={post.title}
-                                timestamp={post.date_pub}
-                            />
-                        </Link>
+                        <PostCard
+                            key={index}
+                            title={post.title}
+                            link={post.link}
+                            date_pub={post.date_pub}
+                            source="Investor Acumen"
+                        />
                     ))}
                 </div>
             )}
