@@ -6,7 +6,6 @@ import { ArrowUpRight } from 'lucide-react'
 interface InvestorAcumenCardProps {
   title: string;
   description: string;
-  imageUrl: string;
 }
 
 const InvestorAcumenCard: React.FC<InvestorAcumenCardProps> = ({ title, description }) => {
