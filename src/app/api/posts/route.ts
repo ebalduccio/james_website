@@ -33,9 +33,18 @@ export async function POST(req: NextRequest) {
   }
 }
 
-export async function GET() {
+export async function GET(req: NextRequest) {
   try {
-    const response = await axios.get(`${NEXT_PUBLIC_API_BASE_URL}`);
+    const searchParams = req.nextUrl.searchParams;
+    const query = searchParams.get('q');
+
+    let url = `${NEXT_PUBLIC_API_BASE_URL}`;
+    if (query) {
+      // Assumindo que sua API backend suporta pesquisa via parâmetro de consulta
+      url += `?search=${encodeURIComponent(query)}`;
+    }
+
+    const response = await axios.get(url);
     return NextResponse.json(response.data, { status: 200 });
   } catch (error) {
     if (axios.isAxiosError(error)) {

@@ -1,13 +1,13 @@
 import React from 'react';
 
-interface SocialMediaPostProps {
+interface RecentPostProps {
   title: string;
   timestamp?: string;
   content?: string;
 }
 
-const SocialMediaPost: React.FC<SocialMediaPostProps> = ({ title, timestamp, content }) => {
-  console.log('SocialMediaPost props:', { title, timestamp, content });
+const RecentPost: React.FC<RecentPostProps> = ({ title, timestamp, content }) => {
+  console.log('RecentPost props:', { title, timestamp, content });
   return (
     <div className='h-[12rem max-w-[70rem] flex-grow rounded transition duration-250 border-b hover:bg-slate-300 overflow-hidden'>
       <div className='px-3 py-4'>
@@ -23,4 +23,4 @@ const SocialMediaPost: React.FC<SocialMediaPostProps> = ({ title, timestamp, con
   );
 };
 
-export default SocialMediaPost;
+export default RecentPost;

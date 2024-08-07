@@ -4,46 +4,49 @@ import React from 'react'
 import MaxWidthWrapper from './MaxWidthWrapper'
 import FooterLinks from './FooterLinks'
 import { Button } from './ui/button'
+import { Input } from './ui/input'
+import { Textarea } from './ui/textarea'
+import { Send } from 'lucide-react'
 
 const Footer = () => {
     return (
-        <footer className='h-[70rem] lg:h-[35rem] bg-zinc-800'>
+        <footer className='bg-gray-900 text-gray-300 py-16'>
             <MaxWidthWrapper>
-                <div className='flex flex-col lg:flex-row gap-16 lg:justify-between'>
-                    <div className='flex flex-col'>
-                        <div className='flex flex-col gap-4 pt-10 pl-10'>
-                            <h1 className='text-white font-lora text-5xl'>
-                                James Kostohryz
-                            </h1>
-                            <p className='text-white font-roboto text-md max-w-md'>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae rerum, neque excepturi
-                                tempora esse nulla quos deserunt maiores. Et consequuntur
-                                suscipit dolorem repudiandae ut perspiciatis omnis provident deserunt harum ea.
-                            </p>
-                        </div>
-                        <div className='flex flex-col gap-4'>
+                <div className='grid grid-cols-1 lg:grid-cols-3 gap-12'>
+                    <div className='space-y-6'>
+                        <h1 className='text-white font-serif text-4xl'>
+                            James Kostohryz
+                        </h1>
+                        <p className='text-gray-400 max-w-md'>
+                            Financial expert and global strategist with decades of experience in navigating complex market dynamics and shaping investment futures.
+                        </p>
+                        <div className='pt-4'>
                             <FooterLinks />
                         </div>
                     </div>
-                    <div className='flex flex-col gap-4 items-center justify-center'>
-                        <h1 className='font-lora text-4xl text-white'>Message</h1>
-                        <div className='h-80 w-[27rem] md:w-[20rem] bg-zinc-300 rounded-md'>
-                            <div className='grid grid-cols-2 flex-1 pt-9 px-4 gap-x-14 gap-y-7'>
-                                <input type="text" className='bg-black opacity-50 rounded-full py-1 pl-2' placeholder='Name:' />
-                                <input type="text" className='bg-black opacity-50 rounded-full py-1 pl-2' placeholder='Name:' />
-                                <input type="text" className='bg-black opacity-50 rounded-full py-1 pl-2' placeholder='Name:' />
-                                <input type="text" className='bg-black opacity-50 rounded-full py-1 pl-2' placeholder='Name:' />
+                    
+                    <div className='lg:col-span-2'>
+                        <h2 className='font-serif text-3xl text-white mb-6'>Get in Touch</h2>
+                        <form className='space-y-4'>
+                            <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
+                                <Input type="text" placeholder='Name' className='bg-gray-800 border-gray-700 text-white' />
+                                <Input type="email" placeholder='Email' className='bg-gray-800 border-gray-700 text-white' />
+                                <Input type="tel" placeholder='Phone' className='bg-gray-800 border-gray-700 text-white' />
+                                <Input type="text" placeholder='Subject' className='bg-gray-800 border-gray-700 text-white' />
                             </div>
-                            <div className='flex items-center justify-center pt-8'>
-                                <input className='h-24 w-[23rem] md:w-[18rem] bg-black opacity-50 rounded-sm p-2' placeholder='Your Message...' />
-                            </div>
-                            <div className='flex flex-row-reverse pr-6 pt-3'>
-                                <Button variant={'send'}>
+                            <Textarea placeholder='Your Message...' className='bg-gray-800 border-gray-700 text-white h-32' />
+                            <div className='flex justify-end'>
+                                <Button variant='default' className='bg-blue-600 hover:bg-blue-700 text-white'>
                                     Send Message
+                                    <Send className='ml-2 h-4 w-4' />
                                 </Button>
                             </div>
-                        </div>
+                        </form>
                     </div>
+                </div>
+                
+                <div className='mt-12 pt-8 border-t border-gray-800 text-center text-gray-400'>
+                    <p>&copy; {new Date().getFullYear()} James Kostohryz. All rights reserved.</p>
                 </div>
             </MaxWidthWrapper>
         </footer>

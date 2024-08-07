@@ -38,3 +38,50 @@ export const SIDEBARPB:SideBarPbItems[]=[
         ]
     },
 ]
+export const SIDEBARP:SideBarPbItems[]=[
+    {
+        title: 'Main Feed',
+        href: '/publications',
+        icon: <IoHome size={20} />
+    },
+    {
+        title: 'Investor Acumen',
+        href:  '/publications/investoracumen',
+    },
+    {
+        title: 'Seeking Alpha',
+        href: '/publications/seekingalpha',
+    },
+    {
+        title: 'Investing',
+        href: '/publications/investing',
+    },
+    {
+        title: 'TheStreet',
+        href: '/publications/thestreet',
+    },
+]
+
+export const SIDEBARSM:SideBarPbItems[]=[
+    {
+        title: 'Main Feed',
+        href: '/publications',
+        icon: <IoHome size={20} />
+    },
+    {
+        title: 'Facebook',
+        href:  '/socialmedia/facebook',
+    },
+    {
+        title: 'X',
+        href: '/socialmedia/x',
+    },
+    {
+        title: 'Linkedin',
+        href: '/socialmedia/linkedin',
+    },
+    {
+        title: 'Instagram',
+        href: '/socialmedia/instagram',
+    },
+]
