@@ -1,16 +1,18 @@
 'use client'
 
+import React, { Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import Loading from '@/components/Loading'  // Importe o novo componente
+import Loading from '@/components/Loading'
 
 interface Post {
   id: number;
   title: string;
 }
 
-export default function SearchPage() {
+// Componente que usa useSearchParams
+const SearchContent = () => {
   const searchParams = useSearchParams()
   const query = searchParams.get('q')
   const [results, setResults] = useState<Post[]>([])
@@ -55,5 +57,14 @@ export default function SearchPage() {
         </ul>
       )}
     </div>
+  )
+}
+
+// Componente principal da página
+export default function SearchPage() {
+  return (
+    <Suspense fallback={<Loading />}>
+      <SearchContent />
+    </Suspense>
   )
 }
