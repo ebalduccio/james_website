@@ -1,11 +1,10 @@
 'use client'
 
 import React, { useEffect, useState } from 'react';
-import { FacebookPost, getFacebookPosts } from '../api/facebook-posts/route';
+import { FacebookPost, getFacebookPosts } from '../../api/facebook-posts/route';
 import PostCard from '@/app/publications/components/PostCard';
-import Loading from '@/components/Loading';
 
-export default function SocialMediaPage() {
+const FacebookPosts: React.FC = () => {
     const [posts, setPosts] = useState<FacebookPost[]>([]);
     const [error, setError] = useState<string | null>(null);
 
@@ -33,9 +32,9 @@ export default function SocialMediaPage() {
 
     return (
         <div className="py-8 px-4 bg-gray-50">
-            <h2 className="text-3xl font-bold text-gray-800 mb-8">Main Feed</h2>
+            <h2 className="text-3xl font-bold text-gray-800 mb-8">Facebook Posts</h2>
             {posts.length === 0 ? (
-                <Loading />
+                <p className="text-center text-gray-600">No posts available at the moment.</p>
             ) : (
                 <div className="space-y-6">
                     {posts.map((post) => (
@@ -52,3 +51,5 @@ export default function SocialMediaPage() {
         </div>
     );
 };
+
+export default FacebookPosts;

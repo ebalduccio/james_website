@@ -37,6 +37,7 @@
     "draft-js": "^0.11.7",
     "drizzle-kit": "^0.21.1",
     "drizzle-orm": "^0.30.10",
+    "facebook-node-sdk": "^0.2.0",
     "framer-motion": "^11.3.21",
     "html-to-draftjs": "^1.5.0",
     "immutable": "4.x.x",
@@ -64,6 +65,7 @@
     "slate-react": "^0.105.0",
     "tailwind-merge": "^2.1.0",
     "tailwindcss-animate": "^1.0.7",
+    "twitter-api-v2": "^1.17.2",
     "webpack": "^5.27.0",
     "zod": "^3.23.8"
   },

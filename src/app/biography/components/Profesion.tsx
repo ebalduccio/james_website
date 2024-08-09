@@ -2,7 +2,6 @@ import React from 'react'
 import MaxWidthWrapper from '@/components/MaxWidthWrapper'
 import SectionTitle from '@/components/SectionTitle'
 import { Book, Briefcase, GraduationCap } from 'lucide-react'
-import ProfesionCard from '@/components/ProfesionCard'
 import ProfessionCard from '@/components/ProfesionCard'
 
 const Profession = () => {
