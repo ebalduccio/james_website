@@ -1,8 +1,8 @@
 'use client'
 
 import React, { useEffect, useState } from 'react';
-import { FacebookPost, getFacebookPosts } from '../../api/facebook-posts/route';
 import PostCard from '@/app/publications/components/PostCard';
+import { FacebookPost, getFacebookPosts } from '@/lib/api';
 
 const FacebookPosts: React.FC = () => {
     const [posts, setPosts] = useState<FacebookPost[]>([]);

@@ -1,9 +1,9 @@
 'use client'
 
 import React, { useEffect, useState } from 'react';
-import { FacebookPost, getFacebookPosts } from '../api/facebook-posts/route';
 import PostCard from '@/app/publications/components/PostCard';
 import Loading from '@/components/Loading';
+import { FacebookPost, getFacebookPosts } from '@/lib/api';
 
 export default function SocialMediaPage() {
     const [posts, setPosts] = useState<FacebookPost[]>([]);
